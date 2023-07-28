@@ -1,5 +1,7 @@
 # https://leetcode.com/problems/fibonacci-number/
 
+from functools import cache
+
 
 class Solution:
     @cache
