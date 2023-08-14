@@ -5,27 +5,27 @@ import pytest
 
 from groupAnagrams import Solution
 
-Test = namedtuple("Test", "given want")
+TCase = namedtuple("Test", "given want")
 
 
 @pytest.mark.parametrize(
     "test",
     (
-        Test(
+        TCase(
             given=["eat", "tea", "tan", "ate", "nat", "bat"],
             want=[["bat"], ["nat", "tan"], ["ate", "eat", "tea"]],
         ),
-        Test(
+        TCase(
             given=[""],
             want=[[""]],
         ),
-        Test(
+        TCase(
             given=["a"],
             want=[["a"]],
         ),
     ),
 )
-def test_groupAnagrams(test: Test):
+def test_groupAnagrams(test: TCase):
     solution = Solution()
 
     got = solution.groupAnagrams(test.given)
