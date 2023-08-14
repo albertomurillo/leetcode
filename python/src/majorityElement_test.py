@@ -27,3 +27,22 @@ solution = Solution()
 def test_majorityElement(fn: callable, given: List[int], want: int):
     got = fn(given)
     assert got == want
+
+
+@pytest.mark.benchmark()
+@pytest.mark.parametrize(
+    "fn",
+    (
+        (solution.majorityElementBoyerMoore),
+        (solution.majorityElementHashMap),
+        (solution.majorityElementPython),
+    ),
+)
+@pytest.mark.parametrize(
+    "given, want",
+    (([2, 2, 1, 1, 1, 2, 2], 2),),
+)
+def test_benchmark_majorityElement(
+    benchmark, fn: callable, given: List[int], want: int
+):
+    benchmark(fn, given)
