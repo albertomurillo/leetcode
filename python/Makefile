@@ -16,3 +16,6 @@ benchmark: deps
 
 deps:
 	poetry install --sync
+
+update:
+	scripts/poetry_update_deps.sh
