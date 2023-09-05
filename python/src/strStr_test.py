@@ -9,8 +9,9 @@ solution = Solution()
     "fn",
     (
         (solution.strStr),
-        (solution.strStr_python),
+        (solution.strStr_boyer_moore),
         (solution.strStr_knuth_morris_pratt),
+        (solution.strStr_python),
     ),
 )
 @pytest.mark.parametrize(
@@ -21,6 +22,8 @@ solution = Solution()
         ("sadbutsad", "", 0),
         ("a", "a", 0),
         ("ABABDABACDABABCABABA", "ABABCABAB", 10),
+        ("babbbbbabb", "bbab", 5),
+        ("bbbbababbbaabbba", "abb", 6),
     ),
 )
 def test_strStr(fn: callable, haystack: str, needle: str, want: int):
