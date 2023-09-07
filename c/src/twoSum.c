@@ -4,6 +4,8 @@
  * Note: The returned array must be malloced, assume caller calls free().
  */
 
+#include "lib/uthash.h"
+
 struct map {
     int key;
     int val;
