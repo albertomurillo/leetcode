@@ -1,5 +1,9 @@
 // https://leetcode.com/problems/merge-strings-alternately
 
+package leetcode
+
+import "strings"
+
 func mergeAlternately(word1 string, word2 string) string {
 	solution := strings.Builder{}
 

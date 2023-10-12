@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/greatest-common-divisor-of-strings/
 
+package leetcode
+
 func gcd(a, b int) int {
 	if b == 0 {
 		return a

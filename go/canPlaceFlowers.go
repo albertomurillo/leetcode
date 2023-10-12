@@ -1,5 +1,7 @@
 //  https://leetcode.com/problems/can-place-flowers/
 
+package leetcode
+
 func canPlaceFlowers(flowerbed []int, n int) bool {
 	lastIndex := len(flowerbed) - 1
 	for i := 0; i <= lastIndex; {

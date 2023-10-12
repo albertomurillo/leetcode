@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/fibonacci-number/
 
+package leetcode
+
 func fib(n int) int {
 	cache := make(map[int]int)
 

@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/water-bottles/
 
+package leetcode
+
 func numWaterBottles(numBottles int, numExchange int) int {
 	full := numBottles
 	empty := 0
