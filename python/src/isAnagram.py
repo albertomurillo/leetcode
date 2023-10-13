@@ -5,18 +5,15 @@ from collections import defaultdict
 
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        counter = [0] * 26
+
         if len(s) != len(t):
             return False
 
-        counter = defaultdict(int)
         for c in s:
-            counter[c] += 1
+            counter[ord(c) - 97] += 1
 
         for c in t:
-            counter[c] -= 1
+            counter[ord(c) - 97] -= 1
 
-        for val in counter.values():
-            if val != 0:
-                return False
-
-        return True
+        return not any(counter)
