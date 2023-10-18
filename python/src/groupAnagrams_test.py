@@ -1,13 +1,22 @@
 from collections import namedtuple
-from typing import List
+from typing import Callable, List
 
 import pytest
 
 from groupAnagrams import Solution
 
+solution = Solution()
+
 TCase = namedtuple("Test", "given want")
 
 
+@pytest.mark.parametrize(
+    "fn",
+    (
+        (solution.groupAnagrams),
+        (solution.groupAnagrams_sort),
+    ),
+)
 @pytest.mark.parametrize(
     "test",
     (
@@ -25,10 +34,8 @@ TCase = namedtuple("Test", "given want")
         ),
     ),
 )
-def test_groupAnagrams(test: TCase):
-    solution = Solution()
-
-    got = solution.groupAnagrams(test.given)
+def test_groupAnagrams(fn: Callable, test: TCase):
+    got = fn(test.given)
     sorted_got = [sorted(i) for i in got]
     sorted_got = sorted(sorted_got)
 
