@@ -3,13 +3,6 @@
 package leetcode
 
 func maxProfit(prices []int) int {
-	max := func(a, b int) int {
-		if a > b {
-			return a
-		}
-		return b
-	}
-
 	left := 0
 	right := 1
 	profit := 0

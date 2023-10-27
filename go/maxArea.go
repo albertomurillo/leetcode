@@ -3,20 +3,6 @@
 package leetcode
 
 func maxArea(height []int) int {
-	min := func(a, b int) int {
-		if a < b {
-			return a
-		}
-		return b
-	}
-
-	max := func(a, b int) int {
-		if a > b {
-			return a
-		}
-		return b
-	}
-
 	l := 0
 	r := len(height) - 1
 	res := 0
