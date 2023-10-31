@@ -19,51 +19,16 @@ class Solution:
         tail = dummy
 
         carry = 0
-        while l1 and l2:
+        while l1 or l2 or carry:
             node = ListNode()
             tail.next = node
             tail = tail.next
-            digit = l1.val + l2.val + carry
-            if digit < 10:
-                node.val = digit
-                carry = 0
-            else:
-                node.val = digit % 10
-                carry = digit // 10
-            l1 = l1.next
-            l2 = l2.next
 
-        # todo: l1 is longer than l2
-        while l1:
-            node = ListNode()
-            tail.next = node
-            tail = tail.next
-            digit = l1.val + carry
-            if digit < 10:
-                node.val = digit
-                carry = 0
-            else:
-                node.val = digit % 10
-                carry = digit // 10
-            l1 = l1.next
+            n1 = l1.val if l1 else 0
+            n2 = l2.val if l2 else 0
+            carry, node.val = divmod(n1 + n2 + carry, 10)
 
-        while l2:
-            node = ListNode()
-            tail.next = node
-            tail = tail.next
-            digit = l2.val + carry
-            if digit < 10:
-                node.val = digit
-                carry = 0
-            else:
-                node.val = digit % 10
-                carry = digit // 10
-            l2 = l2.next
-
-        if carry:
-            node = ListNode()
-            node.val = carry
-            tail.next = node
-            tail = tail.next
+            l1 = l1.next if l1 else None
+            l2 = l2.next if l2 else None
 
         return dummy.next
