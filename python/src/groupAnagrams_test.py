@@ -1,5 +1,5 @@
 from collections import namedtuple
-from typing import Callable, List
+from typing import Callable
 
 import pytest
 

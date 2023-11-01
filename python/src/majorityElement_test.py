@@ -1,4 +1,4 @@
-from typing import List
+from typing import Callable, List
 
 import pytest
 
@@ -39,10 +39,8 @@ def test_majorityElement(fn: callable, given: List[int], want: int):
     ),
 )
 @pytest.mark.parametrize(
-    "given, want",
-    (([2, 2, 1, 1, 1, 2, 2], 2),),
+    "given",
+    (([2, 2, 1, 1, 1, 2, 2]),),
 )
-def test_benchmark_majorityElement(
-    benchmark, fn: callable, given: List[int], want: int
-):
+def test_benchmark_majorityElement(benchmark, fn: Callable, given: List[int]):
     benchmark(fn, given)

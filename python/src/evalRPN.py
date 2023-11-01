@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/evaluate-reverse-polish-notation
 
 import operator
-from types import List
+from typing import List
 
 
 class Solution:

@@ -1,8 +1,10 @@
 # https://leetcode.com/problems/greatest-common-divisor-of-strings/
 
+
 import math
 
 
+# pylint: disable=duplicate-code
 class Solution:
     def gcdOfStrings(self, str1: str, str2: str) -> str:
         def is_common_divisor(str1: str, str2: str, divisor: int) -> bool:

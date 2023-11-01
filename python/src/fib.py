@@ -1,12 +1,14 @@
 # https://leetcode.com/problems/fibonacci-number/
 
-from functools import cache
-
 
 class Solution:
-    @cache
     def fib(self, n: int) -> int:
         if n < 2:
             return n
 
-        return self.fib(n - 1) + self.fib(n - 2)
+        n2, n1 = 0, 1
+        for _ in range(2, n + 1):
+            res = n2 + n1
+            n2, n1 = n1, res
+
+        return res

@@ -12,7 +12,7 @@ class Solution:
 
         while min_k <= max_k:
             k = (min_k + max_k) // 2
-            would_take_h = sum([math.ceil(bananas / k) for bananas in piles])
+            would_take_h = sum((math.ceil(bananas / k) for bananas in piles))
             if would_take_h > h:
                 min_k = k + 1
                 continue

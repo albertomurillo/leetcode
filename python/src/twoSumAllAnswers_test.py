@@ -1,4 +1,4 @@
-from typing import List
+from typing import Callable, List
 
 import pytest
 
@@ -51,13 +51,13 @@ def test_twoSumAllAnswers(fn: callable, nums: List[int], target: int, want: List
     ),
 )
 @pytest.mark.parametrize(
-    "name, nums, target",
+    "nums, target",
     (
-        ("all answers", [1] * 100, 2),
-        ("no answers", [1] * 100, 0),
+        ([1] * 100, 2),
+        ([1] * 100, 0),
     ),
 )
 def test_benchmark_twoSumAllAnswers(
-    benchmark, fn: callable, name: str, nums: List[int], target: int
+    benchmark, fn: Callable, nums: List[int], target: int
 ):
     benchmark(fn, nums, target)

@@ -1,15 +1,11 @@
 # https://leetcode.com/problems/reverse-linked-list
 
-from typing import List, Optional
+from typing import Optional
+
+from leetcode import ListNode
 
 
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-
+# pylint: disable=duplicate-code
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         prev = None

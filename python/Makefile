@@ -1,4 +1,4 @@
-all: format test
+all: format test lint
 
 format: deps
 	poetry run isort .
@@ -19,3 +19,7 @@ deps:
 
 update:
 	scripts/poetry_update_deps.sh
+
+lint: deps
+	poetry run flake8 src
+	poetry run pylint src

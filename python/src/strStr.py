@@ -6,12 +6,12 @@ from typing import List
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
         """O(n * m)"""
-        for i, c in enumerate(haystack):
+        for i in range(len(haystack)):
             if haystack[i : i + len(needle)] == needle:
                 return i
         return -1
 
-    def strStr_boyer_moore(self, haystack: str, needle: str) -> int:
+    def strStr_boyer_moore(self, haystack: str, needle: str) -> int:  # noqa: C901
         def build_bad_character_table(needle: str) -> List[int]:
             m = len(needle)
             last = m - 1

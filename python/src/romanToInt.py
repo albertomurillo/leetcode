@@ -14,10 +14,10 @@ class Solution:
         }
 
         total = 0
-        for i in range(len(s)):
-            if i < len(s) - 1 and roman[s[i]] < roman[s[i + 1]]:
-                total -= roman[s[i]]
+        for i, c in enumerate(s):
+            if i < len(s) - 1 and roman[c] < roman[s[i + 1]]:
+                total -= roman[c]
             else:
-                total += roman[s[i]]
+                total += roman[c]
 
         return total

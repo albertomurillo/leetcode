@@ -3,7 +3,7 @@
 
 class Solution:
     def reverse(self, x: int) -> int:
-        MAX = 2147483647  #  2**31 - 1
+        MAX = 2147483647  # 2**31 - 1
         mul = -1 if x < 0 else 1
         x = abs(x)
         res = 0

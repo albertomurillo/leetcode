@@ -14,7 +14,7 @@ class Solution:
         }
 
         for c in s:
-            if c in pairs.keys():
+            if c in pairs:
                 q.append(pairs[c])
                 continue
 

@@ -5,6 +5,9 @@ from typing import List
 
 
 class Solution:
+    board: List[List[str]]
+    empty_cells: deque
+
     def solveSudoku(self, board: List[List[str]]) -> None:
         """
         Do not return anything, modify board in-place instead.

@@ -30,9 +30,9 @@ class Solution:
 
         max_left = []
         tmp = 0
-        for i in range(len(height)):
+        for i, h in enumerate(height):
             max_left.append(tmp)
-            tmp = max(tmp, height[i])
+            tmp = max(tmp, h)
 
         max_right = []
         tmp = 0
