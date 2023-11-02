@@ -1,5 +1,5 @@
 from collections import deque
-from typing import Generator
+from typing import Generator, List, Optional
 
 
 # Definition for singly-linked list.
@@ -16,23 +16,6 @@ class TreeNode:
         self.left = left
         self.right = right
 
-    def level_order_insert(self, val):
-        q = deque()
-        q.append(self)
-        while True:
-            p = q.popleft()
-
-            if not p.left:
-                p.left = TreeNode(val)
-                return
-
-            if not p.right:
-                p.right = TreeNode(val)
-                return
-
-            q.append(p.left)
-            q.append(p.right)
-
     def level_order_traversal(self) -> Generator:
         q = deque()
         q.append(self)
@@ -45,3 +28,28 @@ class TreeNode:
 
             if p.right:
                 q.append(p.right)
+
+
+def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:
+    if not values:
+        return None
+
+    root = TreeNode(values[0])
+    q = deque()
+    q.append(root)
+
+    i = 1
+    while i < len(values):
+        p = q.popleft()
+
+        p.left = TreeNode(values[i]) if values[i] else None
+        if p.left:
+            q.append(p.left)
+        i += 1
+
+        p.right = TreeNode(values[i]) if i < len(values) and values[i] else None
+        if p.right:
+            q.append(p.right)
+        i += 1
+
+    return root

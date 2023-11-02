@@ -3,22 +3,19 @@ from typing import List
 import pytest
 
 from diameterOfBinaryTree import Solution
-from leetcode import TreeNode
+from leetcode import build_tree
 
 solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "given, want",
+    "root, want",
     (
         ([1, 2, 3, 4, 5], 3),
         ([1, 2], 1),
     ),
 )
-def test_diameterOfBinaryTree(given: List[int], want: int):
-    tree = TreeNode(given[0])
-    for val in given[1:]:
-        tree.level_order_insert(val)
-
+def test_diameterOfBinaryTree(root: List[int], want: int):
+    tree = build_tree(root)
     got = solution.diameterOfBinaryTree(tree)
     assert got == want
