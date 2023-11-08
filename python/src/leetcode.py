@@ -42,13 +42,13 @@ def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:
     while i < len(values):
         p = q.popleft()
 
-        p.left = TreeNode(values[i]) if values[i] else None
-        if p.left:
+        if values[i] is not None:
+            p.left = TreeNode(values[i])
             q.append(p.left)
         i += 1
 
-        p.right = TreeNode(values[i]) if i < len(values) and values[i] else None
-        if p.right:
+        if i < len(values) and values[i] is not None:
+            p.right = TreeNode(values[i])
             q.append(p.right)
         i += 1
 
