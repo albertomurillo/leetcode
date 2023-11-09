@@ -2,6 +2,13 @@ from collections import deque
 from typing import Generator, List, Optional
 
 
+# Definition of Interval:
+class Interval:
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
