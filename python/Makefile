@@ -23,3 +23,4 @@ update:
 lint: deps
 	poetry run flake8 src
 	poetry run pylint src
+	poetry run pyright src

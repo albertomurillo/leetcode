@@ -10,15 +10,18 @@ class Solution:
         dummy = ListNode()
         dummy.next = head
 
-        left = dummy
-        right = head
+        left: ListNode = dummy
+        right: Optional[ListNode] = head
         for _ in range(n):
+            assert right
             right = right.next
 
         while right:
+            assert left.next
             left = left.next
             right = right.next
 
+        assert left.next
         left.next = left.next.next
 
         return dummy.next

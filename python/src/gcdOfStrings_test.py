@@ -1,3 +1,5 @@
+from typing import Callable
+
 import pytest
 
 from gcdOfStrings import Solution
@@ -20,6 +22,6 @@ solution = Solution()
         ("LEET", "CODE", ""),
     ),
 )
-def test_gcdOfStrings(fn: callable, str1: str, str2: str, want: str):
+def test_gcdOfStrings(fn: Callable, str1: str, str2: str, want: str):
     got = fn(str1, str2)
     assert got == want

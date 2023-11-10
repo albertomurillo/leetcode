@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/maximum-depth-of-binary-tree
 
-from typing import Optional
+from typing import List, Optional, Tuple
 
 from leetcode import TreeNode
 
@@ -12,7 +12,7 @@ class Solution:
         return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 
     def maxDepth_stack(self, root: Optional[TreeNode]) -> int:
-        stack = [(root, 1)]
+        stack: List[Tuple[Optional[TreeNode], int]] = [(root, 1)]
         res = 0
         while stack:
             node, depth = stack.pop()

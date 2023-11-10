@@ -1,6 +1,10 @@
+from typing import List
+
 import pytest
 
 from canJump import Solution
+
+solution = Solution()
 
 
 @pytest.mark.parametrize(
@@ -11,7 +15,6 @@ from canJump import Solution
         ([2, 0], True),
     ),
 )
-def test_canJump(given: int, want: int):
-    solution = Solution()
+def test_canJump(given: List[int], want: int):
     got = solution.canJump(given)
     assert got == want

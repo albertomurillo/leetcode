@@ -17,5 +17,6 @@ solution = Solution()
 )
 def test_kthSmallest(root: List[Optional[int]], k: int, want: int):
     tree = build_tree(root)
+    assert tree
     got = solution.kthSmallest(tree, k)
     assert got == want

@@ -7,7 +7,7 @@ from groupAnagrams import Solution
 
 solution = Solution()
 
-TCase = namedtuple("Test", "given want")
+TCase = namedtuple("TCase", "given want")
 
 
 @pytest.mark.parametrize(

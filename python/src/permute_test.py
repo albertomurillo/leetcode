@@ -1,4 +1,4 @@
-from typing import List
+from typing import Callable, List
 
 import pytest
 
@@ -22,6 +22,6 @@ solution = Solution()
         ([1, 2, 3], [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]),
     ),
 )
-def test_permute(fn: callable, given: List[int], want: List[List[int]]):
+def test_permute(fn: Callable, given: List[int], want: List[List[int]]):
     got = fn(given)
     assert sorted(got) == sorted(want)

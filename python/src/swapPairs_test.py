@@ -1,11 +1,13 @@
-from typing import Any, List
+from typing import List, Optional
 
 import pytest
 
 from swapPairs import ListNode, Solution
 
+solution = Solution()
 
-def to_list(node: ListNode) -> List[any]:
+
+def to_list(node: Optional[ListNode]) -> List[int]:
     result = []
     while node:
         result.append(node.val)
@@ -13,7 +15,7 @@ def to_list(node: ListNode) -> List[any]:
     return result
 
 
-def to_linked_list(items: List[Any]) -> ListNode:
+def to_linked_list(items: List[int]) -> Optional[ListNode]:
     dummy = ListNode()
     curr = dummy
     for item in items:
@@ -30,11 +32,8 @@ def to_linked_list(items: List[Any]) -> ListNode:
         ([1], [1]),
     ),
 )
-def test_swapPairs(given: List[int], want: List[str]):
-    solution = Solution()
+def test_swapPairs(given: List[int], want: List[int]):
     given_ll = to_linked_list(given)
-
-    got = solution.swapPairs(given_ll)
-    got = to_list(got)
-
+    got_ll = solution.swapPairs(given_ll)
+    got = to_list(got_ll)
     assert got == want

@@ -1,4 +1,4 @@
-from typing import Callable, List
+from typing import Callable, List, Optional
 
 import pytest
 
@@ -23,7 +23,7 @@ solution = Solution()
         ([], []),
     ),
 )
-def test_invertTree(fn: Callable, root: List[int], want: bool):
+def test_invertTree(fn: Callable, root: List[Optional[int]], want: bool):
     tree = build_tree(root)
     fn(tree)
     got = list(tree.level_order_traversal()) if tree else []

@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 import pytest
 
@@ -16,7 +16,7 @@ solution = Solution()
         ([], True),
     ),
 )
-def test_isBalanced(root: List[any], want: bool):
-    root = build_tree(root)
-    got = solution.isBalanced(root)
+def test_isBalanced(root: List[Optional[int]], want: bool):
+    _root = build_tree(root)
+    got = solution.isBalanced(_root)
     assert got == want

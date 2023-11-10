@@ -1,5 +1,7 @@
+from __future__ import annotations
+
 from collections import deque
-from typing import Generator, List, Optional
+from typing import Deque, Generator, List, Optional
 
 
 # Definition of Interval:
@@ -11,7 +13,7 @@ class Interval:
 
 # Definition for singly-linked list.
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val: int = 0, next: Optional[ListNode] = None):
         self.val = val
         self.next = next
 
@@ -24,7 +26,7 @@ class TreeNode:
         self.right = right
 
     def level_order_traversal(self) -> Generator:
-        q = deque()
+        q: Deque[TreeNode] = deque()
         q.append(self)
         while q:
             p = q.popleft()
@@ -38,24 +40,24 @@ class TreeNode:
 
 
 def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:
-    if not values:
+    if not values or values[0] is None:
         return None
 
     root = TreeNode(values[0])
-    q = deque()
+    q: Deque[TreeNode] = deque()
     q.append(root)
 
     i = 1
     while i < len(values):
         p = q.popleft()
 
-        if values[i] is not None:
-            p.left = TreeNode(values[i])
+        if (val := values[i]) is not None:
+            p.left = TreeNode(val)
             q.append(p.left)
         i += 1
 
-        if i < len(values) and values[i] is not None:
-            p.right = TreeNode(values[i])
+        if i < len(values) and (val := values[i]) is not None:
+            p.right = TreeNode(val)
             q.append(p.right)
         i += 1
 

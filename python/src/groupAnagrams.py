@@ -12,11 +12,11 @@ class Solution:
             for c in word:
                 key[ord(c) - ord("a")] += 1
             anagrams[tuple(key)].append(word)
-        return anagrams.values()
+        return list(anagrams.values())
 
     def groupAnagrams_sort(self, strs: List[str]) -> List[List[str]]:
         anagrams = defaultdict(list)
         for word in strs:
             sorted_word = "".join(sorted(word))
             anagrams[sorted_word].append(word)
-        return anagrams.values()
+        return list(anagrams.values())

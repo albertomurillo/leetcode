@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/binary-tree-level-order-traversal
 
 from collections import deque
-from typing import List, Optional
+from typing import Deque, List, Optional
 
 from leetcode import TreeNode
 
@@ -9,7 +9,7 @@ from leetcode import TreeNode
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         res = []
-        q = deque()
+        q: Deque[TreeNode] = deque()
 
         if root:
             q.append(root)

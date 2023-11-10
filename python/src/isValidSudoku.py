@@ -1,14 +1,14 @@
 # https://leetcode.com/problems/valid-sudoku
 
 from collections import defaultdict
-from typing import List
+from typing import Dict, List, Set, Tuple
 
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        rows = defaultdict(set)
-        cols = defaultdict(set)
-        boxs = defaultdict(set)
+        rows: Dict[int, Set[str]] = defaultdict(set)
+        cols: Dict[int, Set[str]] = defaultdict(set)
+        boxs: Dict[Tuple[int, int], Set[str]] = defaultdict(set)
 
         for row in range(9):
             for col in range(9):

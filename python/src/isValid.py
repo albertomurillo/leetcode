@@ -2,11 +2,12 @@
 
 
 from collections import deque
+from typing import Deque
 
 
 class Solution:
     def isValid(self, s: str) -> bool:
-        q = deque()
+        q: Deque[str] = deque()
         pairs = {
             "(": ")",
             "[": "]",

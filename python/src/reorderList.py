@@ -8,16 +8,21 @@ from leetcode import ListNode
 # pylint: disable=duplicate-code
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
+        if not head:
+            return
+
         # Find middle
-        slow = head
-        fast = head.next
+        slow: Optional[ListNode] = head
+        fast: Optional[ListNode] = head.next
         while fast and fast.next:
+            assert slow
             slow = slow.next
             fast = fast.next.next
 
         # Split list in two
-        list1 = head
-        list2 = slow.next
+        assert slow
+        list1: Optional[ListNode] = head
+        list2: Optional[ListNode] = slow.next
         slow.next = None
 
         # Reverse second half
@@ -31,8 +36,7 @@ class Solution:
         list2 = prev
 
         # Merge the two lists
-        dummy = ListNode()
-        tail = dummy
+        tail = ListNode()
         while list1 and list2:
             tail.next = list1
             list1 = list1.next
@@ -47,5 +51,3 @@ class Solution:
 
         if list2:
             tail.next = list2
-
-        return dummy.next

@@ -1,11 +1,11 @@
 # https://leetcode.com/problems/two-sum/
 
-from typing import List
+from typing import Dict, List
 
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        seen = {}
+        seen: Dict[int, int] = {}
         for i, num in enumerate(nums):
             want = target - num
             if want in seen:

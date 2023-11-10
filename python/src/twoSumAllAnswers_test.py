@@ -36,7 +36,7 @@ solution = Solution()
         ),
     ),
 )
-def test_twoSumAllAnswers(fn: callable, nums: List[int], target: int, want: List[str]):
+def test_twoSumAllAnswers(fn: Callable, nums: List[int], target: int, want: List[str]):
     got = fn(nums, target)
     got = sorted(tuple(sorted((a, b))) for a, b in got)
     assert got == want

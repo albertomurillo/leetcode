@@ -1,3 +1,5 @@
+from typing import Callable
+
 import pytest
 
 from strStr import Solution
@@ -26,6 +28,6 @@ solution = Solution()
         ("bbbbababbbaabbba", "abb", 6),
     ),
 )
-def test_strStr(fn: callable, haystack: str, needle: str, want: int):
+def test_strStr(fn: Callable, haystack: str, needle: str, want: int):
     got = fn(haystack, needle)
     assert got == want

@@ -5,10 +5,10 @@ from typing import List
 
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        stack = []
-        result = []
+        stack: List[str] = []
+        result: List[str] = []
 
-        def helper(open: int, closed: int) -> str:
+        def helper(open: int, closed: int) -> None:
             if open == closed == n:
                 result.append("".join(stack))
                 return

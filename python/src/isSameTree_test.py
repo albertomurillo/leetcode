@@ -19,7 +19,7 @@ solution = Solution()
     ),
 )
 def test_isSameTree(p: List[Optional[int]], q: List[Optional[int]], want: bool):
-    p = build_tree(p)
-    q = build_tree(q)
-    got = solution.isSameTree(p, q)
+    _p = build_tree(p)
+    _q = build_tree(q)
+    got = solution.isSameTree(_p, _q)
     assert got == want

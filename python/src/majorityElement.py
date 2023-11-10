@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/majority-element
 
 from collections import Counter, defaultdict
-from typing import List
+from typing import Dict, List
 
 
 class Solution:
@@ -23,8 +23,8 @@ class Solution:
         return answer
 
     def majorityElementHashMap(self, nums: List[int]) -> int:
-        counter = defaultdict(int)
-        answer = None
+        counter: Dict[int, int] = defaultdict(int)
+        answer = 0
         max_count = 0
         for num in nums:
             counter[num] += 1

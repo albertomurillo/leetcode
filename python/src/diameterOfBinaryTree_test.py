@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 import pytest
 
@@ -15,7 +15,7 @@ solution = Solution()
         ([1, 2], 1),
     ),
 )
-def test_diameterOfBinaryTree(root: List[int], want: int):
+def test_diameterOfBinaryTree(root: List[Optional[int]], want: int):
     tree = build_tree(root)
     got = solution.diameterOfBinaryTree(tree)
     assert got == want

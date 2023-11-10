@@ -1,3 +1,5 @@
+from typing import Callable
+
 import pytest
 
 from mergeAlternately import Solution
@@ -20,6 +22,6 @@ solution = Solution()
         ("abcd", "pq", "apbqcd"),
     ),
 )
-def test_mergeAlternately(fn: callable, word1: str, word2: str, want: int):
+def test_mergeAlternately(fn: Callable, word1: str, word2: str, want: int):
     got = fn(word1, word2)
     assert got == want

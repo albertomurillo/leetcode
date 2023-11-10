@@ -1,6 +1,6 @@
 from collections import defaultdict
 from itertools import combinations
-from typing import List, Tuple
+from typing import DefaultDict, List, Tuple
 
 
 class Solution:
@@ -18,7 +18,7 @@ class Solution:
         Best: O(n) no solutions
         """
         answer = []
-        seen = defaultdict(list)
+        seen: DefaultDict[int, List[int]] = defaultdict(list)
         for i, n in enumerate(nums):
             want = target - n
             if want in seen:

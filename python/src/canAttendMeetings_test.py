@@ -16,6 +16,6 @@ solution = Solution()
     ),
 )
 def test_canAttendMeetings(intervals: List[Tuple[int, int]], want: bool):
-    intervals = [Interval(start, end) for start, end in intervals]
-    got = solution.canAttendMeetings(intervals)
+    _intervals = [Interval(start, end) for start, end in intervals]
+    got = solution.canAttendMeetings(_intervals)
     assert got == want

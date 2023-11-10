@@ -24,7 +24,7 @@ solution = Solution()
         ([3, 3, 4], 3),
     ),
 )
-def test_majorityElement(fn: callable, given: List[int], want: int):
+def test_majorityElement(fn: Callable, given: List[int], want: int):
     got = fn(given)
     assert got == want
 
