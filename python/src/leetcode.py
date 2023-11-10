@@ -18,6 +18,16 @@ class ListNode:
         self.next = next
 
 
+# Definition for a Node.
+class Node:
+    def __init__(
+        self, x: int, next: Optional[Node] = None, random: Optional[Node] = None
+    ):
+        self.val = x
+        self.next = next
+        self.random = random
+
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
