@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections import deque
-from typing import Deque, Generator, List, Optional
+from typing import Deque, Generator, Iterable, List, Optional
 
 
 # Definition of Interval:
@@ -47,6 +47,26 @@ class TreeNode:
 
             if p.right:
                 q.append(p.right)
+
+
+def build_list(values: List[int]) -> Optional[ListNode]:
+    if not values:
+        return None
+    dummy = ListNode()
+    cur = dummy
+    for val in values:
+        cur.next = ListNode(val)
+        cur = cur.next
+    return dummy.next
+
+
+def iter_list(head: Optional[ListNode]) -> Iterable[int]:
+    if not head:
+        return
+    cur = head
+    while cur:
+        yield cur.val
+        cur = cur.next
 
 
 def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:
