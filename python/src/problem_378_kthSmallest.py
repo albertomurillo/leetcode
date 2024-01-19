@@ -6,19 +6,18 @@ from typing import Generator, List
 
 class Solution:
     def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
-        new = iter(self.merge(matrix))
-        r = matrix[0][0]
-        for _ in range(k):
-            r = next(new)
-        return r
+        items = self.merge(matrix)
+        for _ in range(k - 1):
+            next(items)
+        return next(items)
 
-    def merge(self, rows: List[List[int]]) -> Generator[int, None, None]:
-        q = []
-        for row in rows:
-            heappush(q, row)
+    def merge(self, matrix: List[List[int]]) -> Generator[int, None, None]:
+        q: list[tuple[int, int, int]]
+        q = [(items[0], row, 0) for row, items in enumerate(matrix)]
+
         while q:
-            row = heappop(q)
-            yield row[0]
-            row = row[1:]
-            if row:
-                heappush(q, row)
+            (item, row, col) = heappop(q)
+            yield item
+            col += 1
+            if col < len(matrix[row]):
+                heappush(q, (matrix[row][col], row, col))
