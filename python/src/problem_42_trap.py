@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/trapping-rain-water/
 
+from collections import deque
 from typing import List
 
 
@@ -34,14 +35,13 @@ class Solution:
             max_left.append(tmp)
             tmp = max(tmp, h)
 
-        max_right = []
+        max_right = deque()
         tmp = 0
         for i in range(len(height) - 1, -1, -1):
-            max_right.append(tmp)
+            max_right.appendleft(tmp)
             tmp = max(tmp, height[i])
-        max_right = max_right[::-1]
 
-        mins = [min(max_left[i], max_right[i]) for i in range(len(height))]
+        mins = [min(a, b) for a, b in zip(max_left, max_right)]
 
         for i, h in enumerate(height):
             water = mins[i] - h
