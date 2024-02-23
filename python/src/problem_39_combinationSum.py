@@ -3,6 +3,9 @@
 from collections import deque
 from typing import Deque, List, Tuple
 
+type Subset = Tuple[int, ...]
+type State = Tuple[Subset, int, int]
+
 
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
@@ -30,9 +33,6 @@ class Solution:
         return r
 
     def combinationSum_2(self, candidates: List[int], target: int) -> List[List[int]]:
-        Subset = Tuple[int, ...]
-        State = Tuple[Subset, int, int]
-
         candidates.sort()
         res = []
 
