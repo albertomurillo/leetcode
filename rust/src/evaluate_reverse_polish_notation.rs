@@ -32,7 +32,7 @@ mod tests {
     #[test]
     fn example_1() {
         let tokens = vec!["2", "1", "+", "3", "*"];
-        let tokens = tokens.into_iter().map(|s| s.to_string()).collect();
+        let tokens = tokens.into_iter().map(|s: &str| s.to_string()).collect();
         let got = Solution::eval_rpn(tokens);
         assert_eq!(got, 9);
     }

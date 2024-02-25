@@ -35,11 +35,7 @@ TCase = namedtuple("TCase", "given want")
     ),
 )
 def test_groupAnagrams(fn: Callable, test: TCase):
-    got = fn(test.given)
-    sorted_got = [sorted(i) for i in got]
-    sorted_got = sorted(sorted_got)
+    got = sorted([sorted(i) for i in fn(test.given)])
+    want = sorted([sorted(i) for i in test.want])
 
-    sorted_want = [sorted(i) for i in test.want]
-    sorted_want = sorted(sorted_want)
-
-    assert sorted_got == sorted_want
+    assert got == want
