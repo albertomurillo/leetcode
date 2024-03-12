@@ -35,12 +35,10 @@ class Twitter:
     def getNewsFeed(self, userId: UserId) -> List[TweetId]:
         def helper(userId: UserId) -> Iterable[Tweet]:
             user = userId
-            for tweet in self._tweets[user][-self._feed_size :]:
-                yield tweet
+            yield from self._tweets[user][-self._feed_size :]
 
             for user in self._follows[userId]:
-                for tweet in self._tweets[user][-self._feed_size :]:
-                    yield tweet
+                yield from self._tweets[user][-self._feed_size :]
 
         return [tweet.id for tweet in heapq.nlargest(self._feed_size, helper(userId))]
 
