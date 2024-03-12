@@ -1,26 +1,19 @@
 # https://leetcode.com/problems/top-k-frequent-elements
 
 from collections import Counter
+from itertools import chain, islice
 from typing import List
 
 
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         "O(n)"
-        count = Counter(nums)
+        bucket = [[] for _ in range(len(nums) + 2)]
+        for num, count in Counter(nums).items():
+            bucket[count].append(num)
 
-        freq = [[] for i in range(len(nums) + 1)]
-        for num, count in count.items():
-            freq[count].append(num)
-
-        res = []
-        for i in range(len(freq) - 1, 0, -1):
-            for num in freq[i]:
-                res.append(num)
-                if len(res) == k:
-                    return res
-
-        return res
+        most_frequent = chain.from_iterable(x for x in reversed(bucket) if x)
+        return list(islice(most_frequent, k))
 
     def topKFrequent_python(self, nums: List[int], k: int) -> List[int]:
         """
