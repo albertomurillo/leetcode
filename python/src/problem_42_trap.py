@@ -31,7 +31,7 @@ class Solution:
 
         max_left = []
         tmp = 0
-        for i, h in enumerate(height):
+        for h in height:
             max_left.append(tmp)
             tmp = max(tmp, h)
 
