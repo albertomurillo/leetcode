@@ -14,6 +14,6 @@ class Solution:
                 continue
 
             curr = e
-            nums[i - offset] = nums[i]
+            nums[i - offset] = e
 
         return len(nums) - offset
