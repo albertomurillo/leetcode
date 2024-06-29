@@ -25,7 +25,4 @@ class Solution:
             if q.pop() != c:
                 return False
 
-        if len(q) != 0:
-            return False
-
-        return True
+        return len(q) == 0

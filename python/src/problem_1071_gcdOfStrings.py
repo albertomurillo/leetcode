@@ -19,10 +19,7 @@ class Solution:
                 return False
 
             factor2 = len(str2) // divisor
-            if str2 != str1[:divisor] * factor2:
-                return False
-
-            return True
+            return str2 == str1[:divisor] * factor2
 
         for divisor in range(min(len(str1), len(str2)), 0, -1):
             if is_common_divisor(str1, str2, divisor):
