@@ -33,7 +33,7 @@ class Solution:
                 table[i] = last_prefix + last - i
 
             # Second pass: find repeats of needle's suffix starting from the front
-            for i in range(0, last):
+            for i in range(last):
                 len_suffix = longest_common_suffix(needle, needle[1 : i + 1])
                 if needle[i - len_suffix] != needle[last - len_suffix]:
                     table[last - len_suffix] = len_suffix + last - i
@@ -42,7 +42,7 @@ class Solution:
 
         def longest_common_suffix(s1: str, s2: str) -> int:
             m = min(len(s1), len(s2))
-            for i in range(0, m):
+            for i in range(m):
                 if s1[-1 - i] != s2[-1 - i]:
                     return i
             return m
