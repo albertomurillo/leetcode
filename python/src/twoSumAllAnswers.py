@@ -22,6 +22,6 @@ class Solution:
             want = target - n
             if want in seen:
                 for j in seen[want]:
-                    answer.append((i, j))
+                    answer.append((i, j))  # noqa: PERF401
             seen[n].append(i)
         return answer
