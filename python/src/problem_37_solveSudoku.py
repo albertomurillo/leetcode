@@ -46,16 +46,10 @@ class Solution:
         )
 
     def is_possible_row(self, num: str, row: int) -> bool:
-        for col in range(9):
-            if self.board[row][col] == num:
-                return False
-        return True
+        return all(self.board[row][col] != num for col in range(9))
 
     def is_possible_col(self, num: str, col: int) -> bool:
-        for row in range(9):
-            if self.board[row][col] == num:
-                return False
-        return True
+        return all(self.board[row][col] != num for row in range(9))
 
     def is_possible_square(self, num: str, row: int, col: int) -> bool:
         row = 3 * (row // 3)
