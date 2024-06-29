@@ -24,3 +24,6 @@ build-backend = "poetry.core.masonry.api"
 [tool.coverage.run]
 branch = true
 source = ["src"]
+
+[tool.coverage.report]
+skip_covered = true
