@@ -18,7 +18,6 @@ ignore = [
     "ANN201",  # Missing return type annotation for public function `test_twoSumAllAnswers`
     "ANN202",  # Missing return type annotation for private function `dfs`
     "ANN204",  # Missing return type annotation for special method `__init__`
-    "C413",    # Unnecessary `reversed` call around `sorted()`
     "DTZ005",  # `datetime.datetime.now()` called without a `tz` argument
     "E501",    # Line too long (90 > 88)
     "ERA001",  # Found commented-out code
