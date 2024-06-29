@@ -5,7 +5,7 @@ from __future__ import annotations
 import heapq
 from collections import defaultdict
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Dict, Iterable, List, Set
 
 # Type stubs
@@ -29,7 +29,7 @@ class Twitter:
         self._follows: Dict[UserId, Set[UserId]] = defaultdict(set)
 
     def postTweet(self, userId: UserId, tweetId: TweetId) -> None:
-        tweet = Tweet(datetime.now(), tweetId)
+        tweet = Tweet(datetime.now(tz=UTC), tweetId)
         self._tweets[userId].append(tweet)
 
     def getNewsFeed(self, userId: UserId) -> List[TweetId]:
