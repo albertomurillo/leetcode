@@ -10,7 +10,7 @@ from problem_1_twoSum import Solution
         ([3, 3], 6, [0, 1]),
     ),
 )
-def test_twoSum(nums: list[int], target: int, want: list[int]):
+def test_twoSum(nums: list[int], target: int, want: list[int]) -> None:
     solution = Solution()
     got = solution.twoSum(nums, target)
     assert got == want

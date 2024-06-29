@@ -11,6 +11,6 @@ solution = Solution()
         (2, 3, 5),
     ),
 )
-def test_getSum(a: int, b: int, want: int):
+def test_getSum(a: int, b: int, want: int) -> None:
     got = solution.getSum(a, b)
     assert got == want

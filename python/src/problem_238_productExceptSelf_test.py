@@ -20,6 +20,6 @@ solution = Solution()
         ([-1, 1, 0, -3, 3], [0, 0, 9, 0, 0]),
     ),
 )
-def test_productExceptSelf(fn: Callable, nums: list[int], want: list[int]):
+def test_productExceptSelf(fn: Callable, nums: list[int], want: list[int]) -> None:
     got = fn(nums)
     assert got == want

@@ -13,6 +13,6 @@ solution = Solution()
         (1534236469, 0),
     ),
 )
-def test_reverse(n: int, want: int):
+def test_reverse(n: int, want: int) -> None:
     got = solution.reverse(n)
     assert got == want

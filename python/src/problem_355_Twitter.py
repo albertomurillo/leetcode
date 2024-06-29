@@ -21,12 +21,12 @@ class Tweet:
     time: datetime
     id: TweetId
 
-    def __lt__(self, other: Tweet):
+    def __lt__(self, other: Tweet) -> bool:
         return self.time < other.time
 
 
 class Twitter:
-    def __init__(self):
+    def __init__(self) -> None:
         self._feed_size: int = 10
         self._tweets: dict[UserId, list[Tweet]] = defaultdict(list)
         self._follows: dict[UserId, set[UserId]] = defaultdict(set)

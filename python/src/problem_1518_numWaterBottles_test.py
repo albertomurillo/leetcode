@@ -9,7 +9,7 @@ from problem_1518_numWaterBottles import Solution
         (15, 4, 19),
     ),
 )
-def test_numWaterBottles(numBottles: int, numExchange: int, want: int):
+def test_numWaterBottles(numBottles: int, numExchange: int, want: int) -> None:
     solution = Solution()
     got = solution.numWaterBottles(numBottles, numExchange)
     assert got == want

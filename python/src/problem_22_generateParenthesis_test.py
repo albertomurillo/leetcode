@@ -10,7 +10,7 @@ from problem_22_generateParenthesis import Solution
         (3, ["((()))", "(()())", "(())()", "()(())", "()()()"]),
     ),
 )
-def test_generateParenthesis(given: int, want: list[str]):
+def test_generateParenthesis(given: int, want: list[str]) -> None:
     solution = Solution()
     got = solution.generateParenthesis(given)
     assert got == want

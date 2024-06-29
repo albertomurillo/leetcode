@@ -20,7 +20,7 @@ solution = Solution()
         ),
     ),
 )
-def test_isSubtree(root, subRoot, want):
+def test_isSubtree(root, subRoot, want) -> None:
     root = build_tree(root)
     subRoot = build_tree(subRoot)
     got = solution.isSubtree(root, subRoot)

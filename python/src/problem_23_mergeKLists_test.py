@@ -23,7 +23,7 @@ solution = Solution()
         ([[1], [0]], [0, 1]),
     ),
 )
-def test_mergeKLists(fn: Callable, lists: list[list[int]], want: list[int]):
+def test_mergeKLists(fn: Callable, lists: list[list[int]], want: list[int]) -> None:
     lls = [build_list(x) for x in lists]
     got_lls = fn(lls)
     got = list(iter_list(got_lls))

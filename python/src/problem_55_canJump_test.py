@@ -12,6 +12,6 @@ solution = Solution()
         ([2, 0], True),
     ),
 )
-def test_canJump(given: list[int], want: int):
+def test_canJump(given: list[int], want: int) -> None:
     got = solution.canJump(given)
     assert got == want

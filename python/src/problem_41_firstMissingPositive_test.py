@@ -13,6 +13,6 @@ solution = Solution()
         ([1], 2),
     ),
 )
-def test_firstMissingPositive(nums: list[int], want: int):
+def test_firstMissingPositive(nums: list[int], want: int) -> None:
     got = solution.firstMissingPositive(nums)
     assert got == want

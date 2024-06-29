@@ -24,6 +24,6 @@ solution = Solution()
         (45, 1836311903),
     ),
 )
-def test_climbStairs(fn: Callable, n: int, want: int):
+def test_climbStairs(fn: Callable, n: int, want: int) -> None:
     got = fn(n)
     assert got == want

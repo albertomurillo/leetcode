@@ -20,7 +20,7 @@ solution = Solution()
         ),
     ),
 )
-def test_reverseKGroup(head, k, want):
+def test_reverseKGroup(head, k, want) -> None:
     ll = build_list(head)
     got_ll = solution.reverseKGroup(ll, k)
     got = list(iter_list(got_ll))

@@ -17,6 +17,6 @@ solution = Solution()
         ),
     ),
 )
-def test_merge(intervals, want):
+def test_merge(intervals, want) -> None:
     got = solution.merge(intervals)
     assert got == want

@@ -12,6 +12,6 @@ solution = Solution()
         ([30, 11, 23, 4, 20], 6, 23),
     ),
 )
-def test_minEatingSpeed(piles: list[int], h: int, want: int):
+def test_minEatingSpeed(piles: list[int], h: int, want: int) -> None:
     got = solution.minEatingSpeed(piles, h)
     assert got == want

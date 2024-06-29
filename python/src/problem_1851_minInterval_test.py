@@ -19,6 +19,8 @@ solution = Solution()
         ),
     ),
 )
-def test_minInterval(intervals: list[list[int]], queries: list[int], want: list[int]):
+def test_minInterval(
+    intervals: list[list[int]], queries: list[int], want: list[int]
+) -> None:
     got = solution.minInterval(intervals, queries)
     assert got == want

@@ -24,6 +24,6 @@ solution = Solution()
         ),
     ),
 )
-def test_insert(intervals, newInterval, want):
+def test_insert(intervals, newInterval, want) -> None:
     got = solution.insert(intervals, newInterval)
     assert got == want

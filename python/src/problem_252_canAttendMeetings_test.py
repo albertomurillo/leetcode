@@ -12,7 +12,7 @@ solution = Solution()
         ([(5, 8), (9, 15)], True),
     ),
 )
-def test_canAttendMeetings(intervals: list[tuple[int, int]], want: bool):
+def test_canAttendMeetings(intervals: list[tuple[int, int]], want: bool) -> None:
     _intervals = [Interval(start, end) for start, end in intervals]
     got = solution.canAttendMeetings(_intervals)
     assert got == want

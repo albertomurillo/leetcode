@@ -19,6 +19,6 @@ solution = Solution()
         ([1, 2], [3, 4], 2.5),
     ),
 )
-def test_findMedianSortedArrays(fn, nums1, nums2, want):
+def test_findMedianSortedArrays(fn, nums1, nums2, want) -> None:
     got = fn(nums1, nums2)
     assert got == want

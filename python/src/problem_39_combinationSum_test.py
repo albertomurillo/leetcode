@@ -19,6 +19,6 @@ solution = Solution()
         ([8, 7, 4, 3], 11, [[8, 3], [7, 4], [4, 4, 3]]),
     ),
 )
-def test_combinationSum(fn, candidates, target, want):
+def test_combinationSum(fn, candidates, target, want) -> None:
     got = fn(candidates, target)
     assert sorted(sorted(x) for x in got) == sorted(sorted(x) for x in want)

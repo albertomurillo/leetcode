@@ -4,7 +4,7 @@
 from problem_37_solveSudoku import Solution
 
 
-def test_solveSudoku():
+def test_solveSudoku() -> None:
     board = [
         ["5", "3", ".", ".", "7", ".", ".", ".", "."],
         ["6", ".", ".", "1", "9", "5", ".", ".", "."],

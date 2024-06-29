@@ -21,6 +21,6 @@ solution = Solution()
         ),
     ),
 )
-def test_dailyTemperatures(temperatures: list[int], want: list[int]):
+def test_dailyTemperatures(temperatures: list[int], want: list[int]) -> None:
     got = solution.dailyTemperatures(temperatures)
     assert got == want

@@ -10,7 +10,7 @@ from problem_125_isPalindrome import Solution
         (" ", True),
     ),
 )
-def test_isPalindrome(given: str, want: bool):
+def test_isPalindrome(given: str, want: bool) -> None:
     solution = Solution()
     got = solution.isPalindrome(given)
     assert got == want

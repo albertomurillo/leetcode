@@ -21,6 +21,6 @@ solution = Solution()
         ([1, 2, 3], [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]),
     ),
 )
-def test_permute(fn: Callable, given: list[int], want: list[list[int]]):
+def test_permute(fn: Callable, given: list[int], want: list[list[int]]) -> None:
     got = fn(given)
     assert sorted(got) == sorted(want)

@@ -15,9 +15,6 @@ ignore = [
     "A001",    # Variable `dir` is shadowing a Python builtin
     "A002",    # Argument `open` is shadowing a Python builtin
     "ANN001",  # Missing type annotation for function argument `benchmark`
-    "ANN201",  # Missing return type annotation for public function `test_twoSumAllAnswers`
-    "ANN202",  # Missing return type annotation for private function `dfs`
-    "ANN204",  # Missing return type annotation for special method `__init__`
     "E501",    # Line too long (90 > 88)
     "ERA001",  # Found commented-out code
     "FBT001",  # Boolean-typed positional argument in function definition

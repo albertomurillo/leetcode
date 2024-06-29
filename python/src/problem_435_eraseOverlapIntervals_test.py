@@ -12,6 +12,6 @@ solution = Solution()
         ([[1, 2], [2, 3]], 0),
     ),
 )
-def test_eraseOverlapIntervals(intervals: list[list[int]], want: bool):
+def test_eraseOverlapIntervals(intervals: list[list[int]], want: bool) -> None:
     got = solution.eraseOverlapIntervals(intervals)
     assert got == want

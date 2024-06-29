@@ -9,21 +9,23 @@ if TYPE_CHECKING:
 
 # Definition of Interval:
 class Interval:
-    def __init__(self, start, end):
+    def __init__(self, start, end) -> None:
         self.start = start
         self.end = end
 
 
 # Definition for singly-linked list.
 class ListNode:
-    def __init__(self, val: int = 0, next: ListNode | None = None):
+    def __init__(self, val: int = 0, next: ListNode | None = None) -> None:
         self.val = val
         self.next = next
 
 
 # Definition for a Node.
 class Node:
-    def __init__(self, x: int, next: Node | None = None, random: Node | None = None):
+    def __init__(
+        self, x: int, next: Node | None = None, random: Node | None = None
+    ) -> None:
         self.val = x
         self.next = next
         self.random = random
@@ -31,7 +33,7 @@ class Node:
 
 # Definition for a binary tree node.
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
+    def __init__(self, val=0, left=None, right=None) -> None:
         self.val = val
         self.left = left
         self.right = right

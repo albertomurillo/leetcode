@@ -29,7 +29,7 @@ def to_linked_list(items: list[int]) -> ListNode | None:
         ([1], [1]),
     ),
 )
-def test_swapPairs(given: list[int], want: list[int]):
+def test_swapPairs(given: list[int], want: list[int]) -> None:
     given_ll = to_linked_list(given)
     got_ll = solution.swapPairs(given_ll)
     got = to_list(got_ll)

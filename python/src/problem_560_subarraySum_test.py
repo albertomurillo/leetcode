@@ -12,6 +12,6 @@ solution = Solution()
         ([-1, -1, 1], 1, 1),
     ),
 )
-def test_subarraySum(nums, k, want):
+def test_subarraySum(nums, k, want) -> None:
     got = solution.subarraySum(nums, k)
     assert got == want

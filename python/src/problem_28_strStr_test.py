@@ -27,6 +27,6 @@ solution = Solution()
         ("bbbbababbbaabbba", "abb", 6),
     ),
 )
-def test_strStr(fn: Callable, haystack: str, needle: str, want: int):
+def test_strStr(fn: Callable, haystack: str, needle: str, want: int) -> None:
     got = fn(haystack, needle)
     assert got == want

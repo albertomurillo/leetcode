@@ -13,7 +13,7 @@ solution = Solution()
         ([], []),
     ),
 )
-def test_levelOrder(root: list[int | None], want: list[list[int]]):
+def test_levelOrder(root: list[int | None], want: list[list[int]]) -> None:
     tree = build_tree(root)
     got = solution.levelOrder(tree)
     assert got == want

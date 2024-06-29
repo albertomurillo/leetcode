@@ -15,7 +15,7 @@ solution = Solution()
         ([10, 5, 15], [10, 5, None, None, 15], False),
     ),
 )
-def test_isSameTree(p: list[int | None], q: list[int | None], want: bool):
+def test_isSameTree(p: list[int | None], q: list[int | None], want: bool) -> None:
     _p = build_tree(p)
     _q = build_tree(q)
     got = solution.isSameTree(_p, _q)

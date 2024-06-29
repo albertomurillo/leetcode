@@ -21,7 +21,7 @@ solution = Solution()
         ([1, None, 2], 2),
     ),
 )
-def test_maxDepth(fn: Callable, root: list[int | None], want: int):
+def test_maxDepth(fn: Callable, root: list[int | None], want: int) -> None:
     tree = build_tree(root)
     got = fn(tree)
     assert got == want

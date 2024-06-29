@@ -12,6 +12,6 @@ solution = Solution()
         ([], 0),
     ),
 )
-def test_minMeetingRooms(meetings: list[tuple[int, int]], want: int):
+def test_minMeetingRooms(meetings: list[tuple[int, int]], want: int) -> None:
     got = solution.minMeetingRooms(meetings)
     assert got == want

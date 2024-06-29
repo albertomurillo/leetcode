@@ -35,7 +35,9 @@ solution = Solution()
         ),
     ),
 )
-def test_twoSumAllAnswers(fn: Callable, nums: list[int], target: int, want: list[str]):
+def test_twoSumAllAnswers(
+    fn: Callable, nums: list[int], target: int, want: list[str]
+) -> None:
     got = fn(nums, target)
     got = sorted(tuple(sorted((a, b))) for a, b in got)
     assert got == want
@@ -58,5 +60,5 @@ def test_twoSumAllAnswers(fn: Callable, nums: list[int], target: int, want: list
 )
 def test_benchmark_twoSumAllAnswers(
     benchmark, fn: Callable, nums: list[int], target: int
-):
+) -> None:
     benchmark(fn, nums, target)

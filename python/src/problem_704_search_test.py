@@ -11,6 +11,6 @@ solution = Solution()
         ([-1, 0, 3, 5, 9, 12], 2, -1),
     ),
 )
-def test_search(nums: list[int], target: int, want: int):
+def test_search(nums: list[int], target: int, want: int) -> None:
     got = solution.search(nums, target)
     assert got == want

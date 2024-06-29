@@ -18,6 +18,6 @@ solution = Solution()
         ([0], [[], [0]]),
     ),
 )
-def test_subsets(fn, nums, want):
+def test_subsets(fn, nums, want) -> None:
     got = fn(nums)
     assert sorted(got) == sorted(want)

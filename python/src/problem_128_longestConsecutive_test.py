@@ -11,6 +11,6 @@ solution = Solution()
         ([0, 3, 7, 2, 5, 8, 4, 6, 0, 1], 9),
     ),
 )
-def test_longestConsecutive(nums: list[int], want: int):
+def test_longestConsecutive(nums: list[int], want: int) -> None:
     got = solution.longestConsecutive(nums)
     assert got == want

@@ -37,6 +37,6 @@ solution = Solution()
         ),
     ),
 )
-def test_isValidSudoku(board: list[list[str]], want: bool):
+def test_isValidSudoku(board: list[list[str]], want: bool) -> None:
     got = solution.isValidSudoku(board)
     assert got == want

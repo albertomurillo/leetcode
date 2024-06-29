@@ -20,6 +20,6 @@ solution = Solution()
         ([7, 6, 4, 3, 1], 0),
     ),
 )
-def test_maxProfit(fn: Callable, prices: list[int], want: int):
+def test_maxProfit(fn: Callable, prices: list[int], want: int) -> None:
     got = fn(prices)
     assert got == want

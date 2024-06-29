@@ -4,7 +4,7 @@ import heapq
 
 
 class KthLargest:
-    def __init__(self, k: int, nums: list[int]):
+    def __init__(self, k: int, nums: list[int]) -> None:
         self._k = k
         self._heap = nums
         heapq.heapify(self._heap)
@@ -20,7 +20,7 @@ class KthLargest:
 
 
 class KthLargest_sorted:
-    def __init__(self, k: int, nums: list[int]):
+    def __init__(self, k: int, nums: list[int]) -> None:
         self._k = k
         self._nums = sorted(nums)
 

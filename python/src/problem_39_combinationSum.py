@@ -12,7 +12,7 @@ class Solution:
         subset = []
         candidates.sort()
 
-        def dfs(i: int, s: int):
+        def dfs(i: int, s: int) -> None:
             if s == target:
                 r.append(subset.copy())
                 return

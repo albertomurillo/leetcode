@@ -11,6 +11,6 @@ solution = Solution()
         ([1, 1], 1),
     ),
 )
-def test_maxArea(height: list[int], want: int):
+def test_maxArea(height: list[int], want: int) -> None:
     got = solution.maxArea(height)
     assert got == want

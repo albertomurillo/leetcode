@@ -11,6 +11,6 @@ solution = Solution()
         ([1, 100, 1, 1, 1, 100, 1, 1, 100, 1], 6),
     ),
 )
-def test_minCostClimbingStairs(cost: list[int], want: int):
+def test_minCostClimbingStairs(cost: list[int], want: int) -> None:
     got = solution.minCostClimbingStairs(cost)
     assert got == want

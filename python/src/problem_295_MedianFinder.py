@@ -4,7 +4,7 @@ import heapq
 
 
 class MedianFinder:
-    def __init__(self):
+    def __init__(self) -> None:
         self.small = []
         self.large = []
 

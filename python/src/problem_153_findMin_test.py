@@ -12,6 +12,6 @@ solution = Solution()
         ([11, 13, 15, 17], 11),
     ),
 )
-def test_findMin(nums: list[int], want: int):
+def test_findMin(nums: list[int], want: int) -> None:
     got = solution.findMin(nums)
     assert got == want

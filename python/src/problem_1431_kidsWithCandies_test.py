@@ -12,6 +12,8 @@ solution = Solution()
         ([12, 1, 12], 10, [True, False, True]),
     ),
 )
-def test_kidsWithCandies(candies: list[int], extraCandies: int, want: list[bool]):
+def test_kidsWithCandies(
+    candies: list[int], extraCandies: int, want: list[bool]
+) -> None:
     got = solution.kidsWithCandies(candies, extraCandies)
     assert got == want

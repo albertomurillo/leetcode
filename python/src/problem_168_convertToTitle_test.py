@@ -12,6 +12,6 @@ solution = Solution()
         (701, "ZY"),
     ),
 )
-def test_convertToTitle(columnNumber, want):
+def test_convertToTitle(columnNumber, want) -> None:
     got = solution.convertToTitle(columnNumber)
     assert got == want

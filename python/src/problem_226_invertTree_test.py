@@ -22,7 +22,7 @@ solution = Solution()
         ([], []),
     ),
 )
-def test_invertTree(fn: Callable, root: list[int | None], want: bool):
+def test_invertTree(fn: Callable, root: list[int | None], want: bool) -> None:
     tree = build_tree(root)
     fn(tree)
     got = list(tree.level_order_traversal()) if tree else []

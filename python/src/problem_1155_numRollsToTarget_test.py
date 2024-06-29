@@ -19,6 +19,6 @@ solution = Solution()
         (30, 30, 500, 222616187),
     ),
 )
-def test_numRollsToTarget(fn, n, k, target, want):
+def test_numRollsToTarget(fn, n, k, target, want) -> None:
     got = fn(n, k, target)
     assert got == want

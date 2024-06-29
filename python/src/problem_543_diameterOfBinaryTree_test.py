@@ -12,7 +12,7 @@ solution = Solution()
         ([1, 2], 1),
     ),
 )
-def test_diameterOfBinaryTree(root: list[int | None], want: int):
+def test_diameterOfBinaryTree(root: list[int | None], want: int) -> None:
     tree = build_tree(root)
     got = solution.diameterOfBinaryTree(tree)
     assert got == want

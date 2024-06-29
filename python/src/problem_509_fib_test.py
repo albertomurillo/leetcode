@@ -10,7 +10,7 @@ from problem_509_fib import Solution
         (4, 3),
     ),
 )
-def test_fib(given: int, want: int):
+def test_fib(given: int, want: int) -> None:
     solution = Solution()
     got = solution.fib(given)
     assert got == want

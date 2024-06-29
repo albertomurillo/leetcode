@@ -13,6 +13,6 @@ solution = Solution()
         ("", 0),
     ),
 )
-def test_lengthOfLongestSubstring(s: str, want: int):
+def test_lengthOfLongestSubstring(s: str, want: int) -> None:
     got = solution.lengthOfLongestSubstring(s)
     assert got == want

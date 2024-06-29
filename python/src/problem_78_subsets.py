@@ -5,7 +5,7 @@ from itertools import combinations
 
 class Solution:
     def subsets(self, nums: list[int]) -> list[list[int]]:
-        def dfs(i: int, result: list[list[int]], subset: list[int]):
+        def dfs(i: int, result: list[list[int]], subset: list[int]) -> None:
             if i >= len(nums):
                 result.append(subset.copy())
                 return

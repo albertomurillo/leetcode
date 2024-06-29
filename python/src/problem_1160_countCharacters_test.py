@@ -11,6 +11,6 @@ solution = Solution()
         (["hello", "world", "leetcode"], "welldonehoneyr", 10),
     ),
 )
-def test_countCharacters(words, chars, want):
+def test_countCharacters(words, chars, want) -> None:
     got = solution.countCharacters(words, chars)
     assert got == want

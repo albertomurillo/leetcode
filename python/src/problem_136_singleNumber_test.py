@@ -15,6 +15,6 @@ solution = Solution()
         ([1], 1),
     ),
 )
-def test_singleNumber(nums: list[int], want: int):
+def test_singleNumber(nums: list[int], want: int) -> None:
     got = solution.singleNumber(nums)
     assert got == want

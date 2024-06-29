@@ -39,10 +39,10 @@ class Solution:
 
     def mergeKLists_heap(self, lists: list[ListNode | None]) -> ListNode | None:
         class HeapyListNode:
-            def __init__(self, node: ListNode):
+            def __init__(self, node: ListNode) -> None:
                 self.node = node
 
-            def __lt__(self, other):
+            def __lt__(self, other) -> bool:
                 return self.node.val < other.node.val
 
         heap = [HeapyListNode(node) for node in lists if node]

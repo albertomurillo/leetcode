@@ -10,7 +10,7 @@ from problem_242_isAnagram import Solution
         ("horse", "sore", False),
     ),
 )
-def test_isAnagram(s: str, t: str, want: bool):
+def test_isAnagram(s: str, t: str, want: bool) -> None:
     solution = Solution()
     got = solution.isAnagram(s, t)
     assert got == want

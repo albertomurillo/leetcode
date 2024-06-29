@@ -36,7 +36,7 @@ class TCase(NamedTuple):
         ),
     ),
 )
-def test_groupAnagrams(fn: Callable, test: TCase):
+def test_groupAnagrams(fn: Callable, test: TCase) -> None:
     got = sorted([sorted(i) for i in fn(test.given)])
     want = sorted([sorted(i) for i in test.want])
 

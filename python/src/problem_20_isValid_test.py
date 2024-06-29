@@ -12,7 +12,7 @@ from problem_20_isValid import Solution
         ("]", False),
     ),
 )
-def test_isValid(given: str, want: bool):
+def test_isValid(given: str, want: bool) -> None:
     solution = Solution()
     got = solution.isValid(given)
     assert got == want

@@ -22,6 +22,6 @@ solution = Solution()
         (int("11111111111111111111111111111101", 2), 31),
     ),
 )
-def test_hammingWeight(fn: Callable, n: int, want: int):
+def test_hammingWeight(fn: Callable, n: int, want: int) -> None:
     got = fn(n)
     assert got == want

@@ -20,6 +20,6 @@ solution = Solution()
         ([3, 1, 3, 4, 2], 3),
     ),
 )
-def test_findDuplicate(fn: Callable, nums: list[int], want: int):
+def test_findDuplicate(fn: Callable, nums: list[int], want: int) -> None:
     got = fn(nums)
     assert got == want

@@ -21,6 +21,6 @@ solution = Solution()
         ([3, 0, 1, 0], 1, [0]),
     ),
 )
-def test_topKFrequent(fn: Callable, nums: list[int], k: int, want: list[int]):
+def test_topKFrequent(fn: Callable, nums: list[int], k: int, want: list[int]) -> None:
     got = fn(nums, k)
     assert got == want

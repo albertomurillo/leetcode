@@ -11,6 +11,6 @@ solution = Solution()
         ("11111111111111111111111111111101", 3221225471),
     ),
 )
-def test_reverseBits(n: str, want: int):
+def test_reverseBits(n: str, want: int) -> None:
     got = solution.reverseBits(int(n, 2))
     assert got == want

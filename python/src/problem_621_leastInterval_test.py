@@ -12,6 +12,6 @@ solution = Solution()
         (["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"], 2, 16),
     ),
 )
-def test_leastInterval(tasks: list[str], n: int, want: int):
+def test_leastInterval(tasks: list[str], n: int, want: int) -> None:
     got = solution.leastInterval(tasks, n)
     assert got == want

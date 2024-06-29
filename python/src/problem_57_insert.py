@@ -2,7 +2,7 @@
 
 
 class Solution:
-    def insert(self, intervals: list[list[int]], newInterval: list[int]):
+    def insert(self, intervals: list[list[int]], newInterval: list[int]) -> list:
         res = []
 
         start = 0

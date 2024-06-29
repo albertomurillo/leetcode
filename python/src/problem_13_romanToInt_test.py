@@ -14,7 +14,7 @@ from problem_13_romanToInt import Solution
         ("MCMXCVI", 1996),
     ),
 )
-def test_romanToInt(given: str, want: int):
+def test_romanToInt(given: str, want: int) -> None:
     solution = Solution()
     got = solution.romanToInt(given)
     assert got == want

@@ -22,7 +22,7 @@ solution = Solution()
         ),
     ),
 )
-def test_longestZigZag(root, want):
+def test_longestZigZag(root, want) -> None:
     tree = build_tree(root)
     assert tree is not None
     got = solution.longestZigZag(tree)

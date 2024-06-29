@@ -33,6 +33,6 @@ solution = Solution()
         ),
     ),
 )
-def test_carFleet(target, position, speed, want):
+def test_carFleet(target, position, speed, want) -> None:
     got = solution.carFleet(target, position, speed)
     assert got == want

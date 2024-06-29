@@ -2,7 +2,7 @@
 
 
 class Node:
-    def __init__(self, key: int, value: int):
+    def __init__(self, key: int, value: int) -> None:
         self.key = key
         self.value = value
         self.prev: Node | None = None
@@ -10,7 +10,7 @@ class Node:
 
 
 class LRUCache:
-    def __init__(self, capacity: int):
+    def __init__(self, capacity: int) -> None:
         self._capacity = capacity
         self._cache: dict[int, Node] = {}
         self._left = Node(0, 0)

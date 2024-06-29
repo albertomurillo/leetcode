@@ -13,7 +13,7 @@ solution = Solution()
         ([], True),
     ),
 )
-def test_isBalanced(root: list[int | None], want: bool):
+def test_isBalanced(root: list[int | None], want: bool) -> None:
     _root = build_tree(root)
     got = solution.isBalanced(_root)
     assert got == want

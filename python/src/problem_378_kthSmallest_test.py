@@ -11,6 +11,6 @@ solution = Solution()
         ([[-5]], 1, -5),
     ),
 )
-def test_kthSmallest(matrix, k, want):
+def test_kthSmallest(matrix, k, want) -> None:
     got = solution.kthSmallest(matrix, k)
     assert got == want

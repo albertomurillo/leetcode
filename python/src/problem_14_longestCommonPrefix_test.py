@@ -13,6 +13,6 @@ solution = Solution()
         ([""], ""),
     ),
 )
-def test_longestCommonPrefix(strs, want):
+def test_longestCommonPrefix(strs, want) -> None:
     got = solution.longestCommonPrefix(strs)
     assert got == want

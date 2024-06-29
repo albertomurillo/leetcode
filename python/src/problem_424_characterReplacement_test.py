@@ -20,6 +20,6 @@ solution = Solution()
         ("AABABBA", 1, 4),
     ),
 )
-def test_characterReplacement(fn: Callable, s: str, k: int, want: int):
+def test_characterReplacement(fn: Callable, s: str, k: int, want: int) -> None:
     got = fn(s, k)
     assert got == want

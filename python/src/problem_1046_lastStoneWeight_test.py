@@ -11,6 +11,6 @@ solution = Solution()
         ([1], 1),
     ),
 )
-def test_lastStoneWeight(stones: list[int], want: int):
+def test_lastStoneWeight(stones: list[int], want: int) -> None:
     got = solution.lastStoneWeight(stones)
     assert got == want

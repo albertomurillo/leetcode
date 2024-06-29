@@ -12,6 +12,6 @@ solution = Solution()
         ([5, 4, -1, 7, 8], 23),
     ),
 )
-def test_maxSubArray(nums: list[int], want: int):
+def test_maxSubArray(nums: list[int], want: int) -> None:
     got = solution.maxSubArray(nums)
     assert got == want

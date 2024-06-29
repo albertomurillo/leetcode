@@ -4,7 +4,7 @@ from collections import defaultdict
 
 
 class TimeMap:
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Initialize your data structure here.
         """

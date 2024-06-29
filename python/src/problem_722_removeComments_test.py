@@ -42,6 +42,6 @@ solution = Solution()
         ),
     ),
 )
-def test_removeComments(source, want):
+def test_removeComments(source, want) -> None:
     got = solution.removeComments(source)
     assert got == want

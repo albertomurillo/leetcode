@@ -25,6 +25,6 @@ solution = Solution()
         ),
     ),
 )
-def test_spiralOrder(matrix, want):
+def test_spiralOrder(matrix, want) -> None:
     got = solution.spiralOrder(matrix)
     assert got == want
