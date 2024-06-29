@@ -1,11 +1,10 @@
 # https://leetcode.com/problems/trapping-rain-water/
 
 from collections import deque
-from typing import List
 
 
 class Solution:
-    def trap(self, height: List[int]) -> int:
+    def trap(self, height: list[int]) -> int:
         left = 0
         right = len(height) - 1
 
@@ -26,7 +25,7 @@ class Solution:
 
         return res
 
-    def trap_array(self, height: List[int]) -> int:
+    def trap_array(self, height: list[int]) -> int:
         res = 0
 
         max_left = []
@@ -49,7 +48,7 @@ class Solution:
 
         return res
 
-    def trap_naive(self, height: List[int]) -> int:
+    def trap_naive(self, height: list[int]) -> int:
         res = 0
         for i, h in enumerate(height):
             left = max(height[:i], default=0)

@@ -1,11 +1,10 @@
 # https://leetcode.com/problems/group-anagrams/
 
 from collections import defaultdict
-from typing import List
 
 
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
         anagrams = defaultdict(list)
         for word in strs:
             key = [0] * 26
@@ -14,7 +13,7 @@ class Solution:
             anagrams[tuple(key)].append(word)
         return list(anagrams.values())
 
-    def groupAnagrams_sort(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams_sort(self, strs: list[str]) -> list[list[str]]:
         anagrams = defaultdict(list)
         for word in strs:
             sorted_word = "".join(sorted(word))

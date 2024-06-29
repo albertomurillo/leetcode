@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_746_minCostClimbingStairs import Solution
 
@@ -13,6 +11,6 @@ solution = Solution()
         ([1, 100, 1, 1, 1, 100, 1, 1, 100, 1], 6),
     ),
 )
-def test_minCostClimbingStairs(cost: List[int], want: int):
+def test_minCostClimbingStairs(cost: list[int], want: int):
     got = solution.minCostClimbingStairs(cost)
     assert got == want

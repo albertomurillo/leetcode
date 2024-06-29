@@ -1,4 +1,4 @@
-from typing import Callable, List
+from collections.abc import Callable
 
 import pytest
 from problem_287_findDuplicate import Solution
@@ -20,6 +20,6 @@ solution = Solution()
         ([3, 1, 3, 4, 2], 3),
     ),
 )
-def test_findDuplicate(fn: Callable, nums: List[int], want: int):
+def test_findDuplicate(fn: Callable, nums: list[int], want: int):
     got = fn(nums)
     assert got == want

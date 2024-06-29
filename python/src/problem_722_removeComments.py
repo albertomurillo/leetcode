@@ -1,10 +1,8 @@
 # https://leetcode.com/problems/remove-comments
 
-from typing import List
-
 
 class Solution:
-    def removeComments(self, source: List[str]) -> List[str]:
+    def removeComments(self, source: list[str]) -> list[str]:
         src = "\n".join(source)
         eof = len(src)
         buf = []

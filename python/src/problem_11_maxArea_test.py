@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_11_maxArea import Solution
 
@@ -13,6 +11,6 @@ solution = Solution()
         ([1, 1], 1),
     ),
 )
-def test_maxArea(height: List[int], want: int):
+def test_maxArea(height: list[int], want: int):
     got = solution.maxArea(height)
     assert got == want

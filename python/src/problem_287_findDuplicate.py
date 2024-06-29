@@ -1,10 +1,8 @@
 # https://leetcode.com/problems/find-the-duplicate-number
 
-from typing import List
-
 
 class Solution:
-    def findDuplicate(self, nums: List[int]) -> int:
+    def findDuplicate(self, nums: list[int]) -> int:
         """
         time: O(n)
         space: O(n)
@@ -16,7 +14,7 @@ class Solution:
             seen.add(num)
         raise ValueError
 
-    def findDuplicate_floyd(self, nums: List[int]) -> int:
+    def findDuplicate_floyd(self, nums: list[int]) -> int:
         """
         Floyd's tortoise and hare algorithm
         time: O(n)

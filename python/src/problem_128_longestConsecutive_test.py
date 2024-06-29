@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_128_longestConsecutive import Solution
 
@@ -13,6 +11,6 @@ solution = Solution()
         ([0, 3, 7, 2, 5, 8, 4, 6, 0, 1], 9),
     ),
 )
-def test_longestConsecutive(nums: List[int], want: int):
+def test_longestConsecutive(nums: list[int], want: int):
     got = solution.longestConsecutive(nums)
     assert got == want

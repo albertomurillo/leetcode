@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_22_generateParenthesis import Solution
 
@@ -12,7 +10,7 @@ from problem_22_generateParenthesis import Solution
         (3, ["((()))", "(()())", "(())()", "()(())", "()()()"]),
     ),
 )
-def test_generateParenthesis(given: int, want: List[str]):
+def test_generateParenthesis(given: int, want: list[str]):
     solution = Solution()
     got = solution.generateParenthesis(given)
     assert got == want

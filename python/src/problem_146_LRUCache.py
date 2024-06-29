@@ -1,20 +1,18 @@
 # https://leetcode.com/problems/lru-cache
 
-from typing import Dict, Optional
-
 
 class Node:
     def __init__(self, key: int, value: int):
         self.key = key
         self.value = value
-        self.prev: Optional[Node] = None
-        self.next: Optional[Node] = None
+        self.prev: Node | None = None
+        self.next: Node | None = None
 
 
 class LRUCache:
     def __init__(self, capacity: int):
         self._capacity = capacity
-        self._cache: Dict[int, Node] = {}
+        self._cache: dict[int, Node] = {}
         self._left = Node(0, 0)
         self._right = Node(0, 0)
         self._left.next = self._right

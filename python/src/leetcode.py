@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections import deque
-from typing import Deque, Generator, Iterable, List, Optional
+from collections.abc import Generator, Iterable
 
 
 # Definition of Interval:
@@ -13,16 +13,14 @@ class Interval:
 
 # Definition for singly-linked list.
 class ListNode:
-    def __init__(self, val: int = 0, next: Optional[ListNode] = None):
+    def __init__(self, val: int = 0, next: ListNode | None = None):
         self.val = val
         self.next = next
 
 
 # Definition for a Node.
 class Node:
-    def __init__(
-        self, x: int, next: Optional[Node] = None, random: Optional[Node] = None
-    ):
+    def __init__(self, x: int, next: Node | None = None, random: Node | None = None):
         self.val = x
         self.next = next
         self.random = random
@@ -36,7 +34,7 @@ class TreeNode:
         self.right = right
 
     def level_order_traversal(self) -> Generator:
-        q: Deque[TreeNode] = deque()
+        q: deque[TreeNode] = deque()
         q.append(self)
         while q:
             p = q.popleft()
@@ -49,7 +47,7 @@ class TreeNode:
                 q.append(p.right)
 
 
-def build_list(values: List[int]) -> Optional[ListNode]:
+def build_list(values: list[int]) -> ListNode | None:
     if not values:
         return None
     dummy = ListNode()
@@ -60,7 +58,7 @@ def build_list(values: List[int]) -> Optional[ListNode]:
     return dummy.next
 
 
-def iter_list(head: Optional[ListNode]) -> Iterable[int]:
+def iter_list(head: ListNode | None) -> Iterable[int]:
     if not head:
         return
     cur = head
@@ -69,12 +67,12 @@ def iter_list(head: Optional[ListNode]) -> Iterable[int]:
         cur = cur.next
 
 
-def build_tree(values: List[Optional[int]]) -> Optional[TreeNode]:
+def build_tree(values: list[int | None]) -> TreeNode | None:
     if not values or values[0] is None:
         return None
 
     root = TreeNode(values[0])
-    q: Deque[TreeNode] = deque()
+    q: deque[TreeNode] = deque()
     q.append(root)
 
     i = 1

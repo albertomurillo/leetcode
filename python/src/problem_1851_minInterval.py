@@ -1,11 +1,10 @@
 # https://leetcode.com/problems/minimum-interval-to-include-each-query
 
 from heapq import heappop, heappush
-from typing import List
 
 
 class Solution:
-    def minInterval(self, intervals: List[List[int]], queries: List[int]) -> List[int]:
+    def minInterval(self, intervals: list[list[int]], queries: list[int]) -> list[int]:
         ranges = [range(x[0], x[1] + 1) for x in sorted(intervals)]
         results = {}
 

@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_605_canPlaceFlowers import Solution
 
@@ -14,6 +12,6 @@ solution = Solution()
         ([0, 1, 1, 0, 0], 1, True),
     ),
 )
-def test_canPlaceFlowers(flowerbed: List[int], n: int, want: bool):
+def test_canPlaceFlowers(flowerbed: list[int], n: int, want: bool):
     got = solution.canPlaceFlowers(flowerbed, n)
     assert got == want

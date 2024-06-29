@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_1851_minInterval import Solution
 
@@ -21,6 +19,6 @@ solution = Solution()
         ),
     ),
 )
-def test_minInterval(intervals: List[List[int]], queries: List[int], want: List[int]):
+def test_minInterval(intervals: list[list[int]], queries: list[int], want: list[int]):
     got = solution.minInterval(intervals, queries)
     assert got == want

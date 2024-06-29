@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_153_findMin import Solution
 
@@ -14,6 +12,6 @@ solution = Solution()
         ([11, 13, 15, 17], 11),
     ),
 )
-def test_findMin(nums: List[int], want: int):
+def test_findMin(nums: list[int], want: int):
     got = solution.findMin(nums)
     assert got == want

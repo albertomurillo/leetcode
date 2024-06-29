@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_875_minEatingSpeed import Solution
 
@@ -14,6 +12,6 @@ solution = Solution()
         ([30, 11, 23, 4, 20], 6, 23),
     ),
 )
-def test_minEatingSpeed(piles: List[int], h: int, want: int):
+def test_minEatingSpeed(piles: list[int], h: int, want: int):
     got = solution.minEatingSpeed(piles, h)
     assert got == want

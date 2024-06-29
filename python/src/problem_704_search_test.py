@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_704_search import Solution
 
@@ -13,6 +11,6 @@ solution = Solution()
         ([-1, 0, 3, 5, 9, 12], 2, -1),
     ),
 )
-def test_search(nums: List[int], target: int, want: int):
+def test_search(nums: list[int], target: int, want: int):
     got = solution.search(nums, target)
     assert got == want

@@ -1,4 +1,4 @@
-from typing import Callable, List
+from collections.abc import Callable
 
 import pytest
 from problem_42_trap import Solution
@@ -21,6 +21,6 @@ solution = Solution()
         ([4, 2, 0, 3, 2, 5], 9),
     ),
 )
-def test_majorityElement(fn: Callable, given: List[int], want: int):
+def test_majorityElement(fn: Callable, given: list[int], want: int):
     got = fn(given)
     assert got == want

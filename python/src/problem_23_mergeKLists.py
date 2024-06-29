@@ -1,13 +1,12 @@
 # https://leetcode.com/problems/merge-k-sorted-lists
 
 import heapq
-from typing import List, Optional
 
 from leetcode import ListNode
 
 
 class Solution:
-    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+    def mergeKLists(self, lists: list[ListNode | None]) -> ListNode | None:
         if len(lists) == 0:
             return None
         if len(lists) == 1:
@@ -20,8 +19,8 @@ class Solution:
         )
 
     def merge2lists(
-        self, list1: Optional[ListNode], list2: Optional[ListNode]
-    ) -> Optional[ListNode]:
+        self, list1: ListNode | None, list2: ListNode | None
+    ) -> ListNode | None:
         dummy = ListNode(0)
         cur = dummy
         while list1 and list2:
@@ -38,7 +37,7 @@ class Solution:
             cur.next = list2
         return dummy.next
 
-    def mergeKLists_heap(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+    def mergeKLists_heap(self, lists: list[ListNode | None]) -> ListNode | None:
         class HeapyListNode:
             def __init__(self, node: ListNode):
                 self.node = node

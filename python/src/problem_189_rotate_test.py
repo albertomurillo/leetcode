@@ -1,5 +1,5 @@
 import copy
-from typing import Callable, List
+from collections.abc import Callable
 
 import pytest
 from problem_189_rotate import Solution
@@ -26,7 +26,7 @@ solution = Solution()
         ([1, 2, 3, 4, 5, 6], 4, [3, 4, 5, 6, 1, 2]),
     ),
 )
-def test_rotate(fn: Callable, nums: List[int], k: int, want: List[int]):
+def test_rotate(fn: Callable, nums: list[int], k: int, want: list[int]):
     nums_copy = copy.deepcopy(nums)
     fn(nums_copy, k)
     assert nums_copy == want

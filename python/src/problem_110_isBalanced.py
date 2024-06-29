@@ -1,12 +1,11 @@
 # https://leetcode.com/problems/balanced-binary-tree
 
-from typing import Optional
 
 from leetcode import TreeNode
 
 
 class Solution:
-    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+    def isBalanced(self, root: TreeNode | None) -> bool:
         def dfs(root):
             if not root:
                 return (True, 0)

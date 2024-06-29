@@ -1,4 +1,4 @@
-from typing import Callable, List
+from collections.abc import Callable
 
 import pytest
 from problem_238_productExceptSelf import Solution
@@ -20,6 +20,6 @@ solution = Solution()
         ([-1, 1, 0, -3, 3], [0, 0, 9, 0, 0]),
     ),
 )
-def test_productExceptSelf(fn: Callable, nums: List[int], want: List[int]):
+def test_productExceptSelf(fn: Callable, nums: list[int], want: list[int]):
     got = fn(nums)
     assert got == want

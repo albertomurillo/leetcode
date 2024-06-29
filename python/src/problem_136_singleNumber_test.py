@@ -1,8 +1,6 @@
 # https://leetcode.com/problems/sudoku-solver/
 
 
-from typing import List
-
 import pytest
 from problem_136_singleNumber import Solution
 
@@ -17,6 +15,6 @@ solution = Solution()
         ([1], 1),
     ),
 )
-def test_singleNumber(nums: List[int], want: int):
+def test_singleNumber(nums: list[int], want: int):
     got = solution.singleNumber(nums)
     assert got == want

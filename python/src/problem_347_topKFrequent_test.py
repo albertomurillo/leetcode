@@ -1,4 +1,4 @@
-from typing import Callable, List
+from collections.abc import Callable
 
 import pytest
 from problem_347_topKFrequent import Solution
@@ -21,6 +21,6 @@ solution = Solution()
         ([3, 0, 1, 0], 1, [0]),
     ),
 )
-def test_topKFrequent(fn: Callable, nums: List[int], k: int, want: List[int]):
+def test_topKFrequent(fn: Callable, nums: list[int], k: int, want: list[int]):
     got = fn(nums, k)
     assert got == want

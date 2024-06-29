@@ -1,5 +1,3 @@
-from typing import List, Optional
-
 import pytest
 from leetcode import build_tree
 from problem_543_diameterOfBinaryTree import Solution
@@ -14,7 +12,7 @@ solution = Solution()
         ([1, 2], 1),
     ),
 )
-def test_diameterOfBinaryTree(root: List[Optional[int]], want: int):
+def test_diameterOfBinaryTree(root: list[int | None], want: int):
     tree = build_tree(root)
     got = solution.diameterOfBinaryTree(tree)
     assert got == want

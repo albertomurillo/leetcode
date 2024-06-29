@@ -1,12 +1,11 @@
 # https://leetcode.com/problems/swap-nodes-in-pairs
 
-from typing import Optional
 
 from leetcode import ListNode
 
 
 class Solution:
-    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def swapPairs(self, head: ListNode | None) -> ListNode | None:
         if head is None:
             return head
 

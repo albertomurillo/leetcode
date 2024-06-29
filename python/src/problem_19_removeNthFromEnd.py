@@ -1,17 +1,16 @@
 # https://leetcode.com/problems/remove-nth-node-from-end-of-list
 
-from typing import Optional
 
 from leetcode import ListNode
 
 
 class Solution:
-    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+    def removeNthFromEnd(self, head: ListNode | None, n: int) -> ListNode | None:
         dummy = ListNode()
         dummy.next = head
 
         left: ListNode = dummy
-        right: Optional[ListNode] = head
+        right: ListNode | None = head
         for _ in range(n):
             assert right
             right = right.next

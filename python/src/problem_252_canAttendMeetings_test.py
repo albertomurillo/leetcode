@@ -1,5 +1,3 @@
-from typing import List, Tuple
-
 import pytest
 from leetcode import Interval
 from problem_252_canAttendMeetings import Solution
@@ -14,7 +12,7 @@ solution = Solution()
         ([(5, 8), (9, 15)], True),
     ),
 )
-def test_canAttendMeetings(intervals: List[Tuple[int, int]], want: bool):
+def test_canAttendMeetings(intervals: list[tuple[int, int]], want: bool):
     _intervals = [Interval(start, end) for start, end in intervals]
     got = solution.canAttendMeetings(_intervals)
     assert got == want

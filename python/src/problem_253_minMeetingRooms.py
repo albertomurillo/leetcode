@@ -1,11 +1,10 @@
 # https://leetcode.com/problems/meeting-rooms-ii
 
 from heapq import heappop, heappush
-from typing import List, Tuple
 
 
 class Solution:
-    def minMeetingRooms(self, meetings: List[Tuple[int, int]]) -> int:
+    def minMeetingRooms(self, meetings: list[tuple[int, int]]) -> int:
         if len(meetings) == 0:
             return 0
 

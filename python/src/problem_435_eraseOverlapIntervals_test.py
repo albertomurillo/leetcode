@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_435_eraseOverlapIntervals import Solution
 
@@ -14,6 +12,6 @@ solution = Solution()
         ([[1, 2], [2, 3]], 0),
     ),
 )
-def test_eraseOverlapIntervals(intervals: List[List[int]], want: bool):
+def test_eraseOverlapIntervals(intervals: list[list[int]], want: bool):
     got = solution.eraseOverlapIntervals(intervals)
     assert got == want

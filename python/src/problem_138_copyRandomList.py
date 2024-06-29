@@ -1,16 +1,15 @@
 # https://leetcode.com/problems/copy-list-with-random-pointer
 
-from typing import Dict, Optional
 
 from leetcode import Node
 
 
 class Solution:
-    def copyRandomList(self, head: Optional[Node]) -> Optional[Node]:
+    def copyRandomList(self, head: Node | None) -> Node | None:
         if not head:
             return head
 
-        cache: Dict[Node, Node] = {}
+        cache: dict[Node, Node] = {}
 
         cur = head
         while cur:

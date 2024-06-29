@@ -1,10 +1,8 @@
 # https://leetcode.com/problems/non-overlapping-intervals/
 
-from typing import List
-
 
 class Solution:
-    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+    def eraseOverlapIntervals(self, intervals: list[list[int]]) -> int:
         intervals.sort()
         res = 0
 

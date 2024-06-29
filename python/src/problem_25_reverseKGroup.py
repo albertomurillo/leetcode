@@ -1,12 +1,11 @@
 # https://leetcode.com/problems/reverse-nodes-in-k-group
 
-from typing import Optional
 
 from leetcode import ListNode
 
 
 class Solution:
-    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+    def reverseKGroup(self, head: ListNode | None, k: int) -> ListNode | None:
         dummy = ListNode()
         dummy.next = head
         curr_group = dummy
@@ -29,7 +28,7 @@ class Solution:
 
         return dummy.next
 
-    def kth_from_node(self, node: Optional[ListNode], k: int) -> Optional[ListNode]:
+    def kth_from_node(self, node: ListNode | None, k: int) -> ListNode | None:
         while node and k:
             node = node.next
             k -= 1

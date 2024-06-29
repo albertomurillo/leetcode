@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_36_isValidSudoku import Solution
 
@@ -39,6 +37,6 @@ solution = Solution()
         ),
     ),
 )
-def test_isValidSudoku(board: List[List[str]], want: bool):
+def test_isValidSudoku(board: list[list[str]], want: bool):
     got = solution.isValidSudoku(board)
     assert got == want

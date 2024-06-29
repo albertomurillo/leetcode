@@ -1,4 +1,4 @@
-from typing import Callable, List
+from collections.abc import Callable
 
 import pytest
 from problem_121_maxProfit import Solution
@@ -20,6 +20,6 @@ solution = Solution()
         ([7, 6, 4, 3, 1], 0),
     ),
 )
-def test_maxProfit(fn: Callable, prices: List[int], want: int):
+def test_maxProfit(fn: Callable, prices: list[int], want: int):
     got = fn(prices)
     assert got == want

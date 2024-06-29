@@ -1,5 +1,3 @@
-from typing import List, Tuple
-
 import pytest
 from problem_253_minMeetingRooms import Solution
 
@@ -14,6 +12,6 @@ solution = Solution()
         ([], 0),
     ),
 )
-def test_minMeetingRooms(meetings: List[Tuple[int, int]], want: int):
+def test_minMeetingRooms(meetings: list[tuple[int, int]], want: int):
     got = solution.minMeetingRooms(meetings)
     assert got == want

@@ -1,5 +1,3 @@
-from typing import List, Optional
-
 import pytest
 from leetcode import build_tree
 from problem_110_isBalanced import Solution
@@ -15,7 +13,7 @@ solution = Solution()
         ([], True),
     ),
 )
-def test_isBalanced(root: List[Optional[int]], want: bool):
+def test_isBalanced(root: list[int | None], want: bool):
     _root = build_tree(root)
     got = solution.isBalanced(_root)
     assert got == want

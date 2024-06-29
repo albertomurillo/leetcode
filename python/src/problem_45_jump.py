@@ -1,10 +1,8 @@
 # https://leetcode.com/problems/jump-game-ii
 
-from typing import List
-
 
 class Solution:
-    def jump(self, nums: List[int]) -> int:
+    def jump(self, nums: list[int]) -> int:
         goal = len(nums) - 1
         left = 0
         right = 0

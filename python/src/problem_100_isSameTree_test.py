@@ -1,5 +1,3 @@
-from typing import List, Optional
-
 import pytest
 from leetcode import build_tree
 from problem_100_isSameTree import Solution
@@ -17,7 +15,7 @@ solution = Solution()
         ([10, 5, 15], [10, 5, None, None, 15], False),
     ),
 )
-def test_isSameTree(p: List[Optional[int]], q: List[Optional[int]], want: bool):
+def test_isSameTree(p: list[int | None], q: list[int | None], want: bool):
     _p = build_tree(p)
     _q = build_tree(q)
     got = solution.isSameTree(_p, _q)

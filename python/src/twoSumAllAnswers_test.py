@@ -1,4 +1,4 @@
-from typing import Callable, List
+from collections.abc import Callable
 
 import pytest
 from twoSumAllAnswers import Solution
@@ -35,7 +35,7 @@ solution = Solution()
         ),
     ),
 )
-def test_twoSumAllAnswers(fn: Callable, nums: List[int], target: int, want: List[str]):
+def test_twoSumAllAnswers(fn: Callable, nums: list[int], target: int, want: list[str]):
     got = fn(nums, target)
     got = sorted(tuple(sorted((a, b))) for a, b in got)
     assert got == want
@@ -57,6 +57,6 @@ def test_twoSumAllAnswers(fn: Callable, nums: List[int], target: int, want: List
     ),
 )
 def test_benchmark_twoSumAllAnswers(
-    benchmark, fn: Callable, nums: List[int], target: int
+    benchmark, fn: Callable, nums: list[int], target: int
 ):
     benchmark(fn, nums, target)

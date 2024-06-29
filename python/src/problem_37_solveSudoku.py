@@ -1,14 +1,13 @@
 # https://leetcode.com/problems/sudoku-solver/
 
 from collections import deque
-from typing import List
 
 
 class Solution:
-    board: List[List[str]]
+    board: list[list[str]]
     empty_cells: deque
 
-    def solveSudoku(self, board: List[List[str]]) -> None:
+    def solveSudoku(self, board: list[list[str]]) -> None:
         """
         Do not return anything, modify board in-place instead.
         """

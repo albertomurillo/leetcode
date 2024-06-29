@@ -1,11 +1,10 @@
 # https://leetcode.com/problems/k-closest-points-to-origin
 
 import heapq
-from typing import List
 
 
 class Solution:
-    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+    def kClosest(self, points: list[list[int]], k: int) -> list[list[int]]:
         heap = [(p[0] ** 2 + p[1] ** 2, p) for p in points]
         heapq.heapify(heap)
 
@@ -16,7 +15,7 @@ class Solution:
 
         return res
 
-    def kClosest_max_heap(self, points: List[List[int]], k: int) -> List[List[int]]:
+    def kClosest_max_heap(self, points: list[list[int]], k: int) -> list[list[int]]:
         """
         space: O(k)
         """
@@ -28,5 +27,5 @@ class Solution:
                 heapq.heappop(heap)
         return [[x, y] for _, x, y in heap]
 
-    def kClosest_python(self, points: List[List[int]], k: int) -> List[List[int]]:
+    def kClosest_python(self, points: list[list[int]], k: int) -> list[list[int]]:
         return heapq.nsmallest(k, points, key=lambda p: p[0] * p[0] + p[1] * p[1])

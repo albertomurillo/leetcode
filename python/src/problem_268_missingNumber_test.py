@@ -1,4 +1,4 @@
-from typing import Callable, List
+from collections.abc import Callable
 
 import pytest
 from problem_268_missingNumber import Solution
@@ -21,6 +21,6 @@ solution = Solution()
         ([9, 6, 4, 2, 3, 5, 7, 0, 1], 8),
     ),
 )
-def test_missingNumber(fn: Callable, given: List[int], want: int):
+def test_missingNumber(fn: Callable, given: list[int], want: int):
     got = fn(given)
     assert got == want

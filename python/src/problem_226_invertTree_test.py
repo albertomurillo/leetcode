@@ -1,4 +1,4 @@
-from typing import Callable, List, Optional
+from collections.abc import Callable
 
 import pytest
 from leetcode import build_tree
@@ -22,7 +22,7 @@ solution = Solution()
         ([], []),
     ),
 )
-def test_invertTree(fn: Callable, root: List[Optional[int]], want: bool):
+def test_invertTree(fn: Callable, root: list[int | None], want: bool):
     tree = build_tree(root)
     fn(tree)
     got = list(tree.level_order_traversal()) if tree else []

@@ -1,10 +1,8 @@
 # https://leetcode.com/problems/product-of-array-except-self
 
-from typing import List
-
 
 class Solution:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
+    def productExceptSelf(self, nums: list[int]) -> list[int]:
         answer = [1] * len(nums)
 
         prefix = 1
@@ -19,7 +17,7 @@ class Solution:
 
         return answer
 
-    def productExceptSelf_naive(self, nums: List[int]) -> List[int]:
+    def productExceptSelf_naive(self, nums: list[int]) -> list[int]:
         answer = [0] * len(nums)
         for i in range(len(nums)):
             res = 1

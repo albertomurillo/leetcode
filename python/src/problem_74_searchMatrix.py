@@ -1,10 +1,8 @@
 # https://leetcode.com/problems/search-a-2d-matrix
 
-from typing import List
-
 
 class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+    def searchMatrix(self, matrix: list[list[int]], target: int) -> bool:
         m = len(matrix) - 1
         n = len(matrix[0]) - 1
 

@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_621_leastInterval import Solution
 
@@ -14,6 +12,6 @@ solution = Solution()
         (["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"], 2, 16),
     ),
 )
-def test_leastInterval(tasks: List[str], n: int, want: int):
+def test_leastInterval(tasks: list[str], n: int, want: int):
     got = solution.leastInterval(tasks, n)
     assert got == want

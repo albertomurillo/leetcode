@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_55_canJump import Solution
 
@@ -14,6 +12,6 @@ solution = Solution()
         ([2, 0], True),
     ),
 )
-def test_canJump(given: List[int], want: int):
+def test_canJump(given: list[int], want: int):
     got = solution.canJump(given)
     assert got == want

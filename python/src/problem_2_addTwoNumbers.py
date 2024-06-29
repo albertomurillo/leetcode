@@ -1,15 +1,13 @@
 # https://leetcode.com/problems/add-two-numbers
 
 
-from typing import Optional
-
 from leetcode import ListNode
 
 
 class Solution:
     def addTwoNumbers(
-        self, l1: Optional[ListNode], l2: Optional[ListNode]
-    ) -> Optional[ListNode]:
+        self, l1: ListNode | None, l2: ListNode | None
+    ) -> ListNode | None:
         dummy = ListNode()
         tail = dummy
 

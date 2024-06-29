@@ -1,10 +1,8 @@
 # https://leetcode.com/problems/first-missing-positive
 
-from typing import List
-
 
 class Solution:
-    def firstMissingPositive(self, nums: List[int]) -> int:
+    def firstMissingPositive(self, nums: list[int]) -> int:
         n = len(nums)
 
         # move positive numbers into position

@@ -2,15 +2,14 @@
 
 import heapq
 from collections import Counter, deque
-from typing import Deque, List, Tuple
 
 
 class Solution:
-    def leastInterval(self, tasks: List[str], n: int) -> int:
+    def leastInterval(self, tasks: list[str], n: int) -> int:
         max_heap = [(-count, task) for task, count in Counter(tasks).items()]
         heapq.heapify(max_heap)
 
-        q: Deque[Tuple[int, int, str]] = deque()
+        q: deque[tuple[int, int, str]] = deque()
 
         ticks = 0
         while max_heap or q:

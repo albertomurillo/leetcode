@@ -1,11 +1,10 @@
 # https://leetcode.com/problems/evaluate-reverse-polish-notation
 
 import operator
-from typing import List
 
 
 class Solution:
-    def evalRPN(self, tokens: List[str]) -> int:
+    def evalRPN(self, tokens: list[str]) -> int:
         stack = []
         operators = {
             "+": operator.add,

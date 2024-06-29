@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_1_twoSum import Solution
 
@@ -12,7 +10,7 @@ from problem_1_twoSum import Solution
         ([3, 3], 6, [0, 1]),
     ),
 )
-def test_twoSum(nums: List[int], target: int, want: List[int]):
+def test_twoSum(nums: list[int], target: int, want: list[int]):
     solution = Solution()
     got = solution.twoSum(nums, target)
     assert got == want

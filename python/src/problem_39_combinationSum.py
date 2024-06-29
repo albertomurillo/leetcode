@@ -1,14 +1,13 @@
 # https://leetcode.com/problems/combination-sum
 
 from collections import deque
-from typing import Deque, List, Tuple
 
-type Subset = Tuple[int, ...]
-type State = Tuple[Subset, int, int]
+type Subset = tuple[int, ...]
+type State = tuple[Subset, int, int]
 
 
 class Solution:
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum(self, candidates: list[int], target: int) -> list[list[int]]:
         r = []
         subset = []
         candidates.sort()
@@ -30,11 +29,11 @@ class Solution:
         dfs(i=0, s=0)
         return r
 
-    def combinationSum_2(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum_2(self, candidates: list[int], target: int) -> list[list[int]]:
         candidates.sort()
         res = []
 
-        states: Deque[State] = deque([((), 0, 0)])
+        states: deque[State] = deque([((), 0, 0)])
         while states:
             subset, s, idx = states.popleft()
 

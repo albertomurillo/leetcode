@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_53_maxSubArray import Solution
 
@@ -14,6 +12,6 @@ solution = Solution()
         ([5, 4, -1, 7, 8], 23),
     ),
 )
-def test_maxSubArray(nums: List[int], want: int):
+def test_maxSubArray(nums: list[int], want: int):
     got = solution.maxSubArray(nums)
     assert got == want

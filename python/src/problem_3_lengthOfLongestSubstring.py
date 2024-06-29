@@ -1,11 +1,9 @@
 # https://leetcode.com/problems/longest-substring-without-repeating-characters
 
-from typing import Set
-
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        seen: Set[str] = set()
+        seen: set[str] = set()
         total = 0
 
         left = 0

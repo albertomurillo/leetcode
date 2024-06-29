@@ -1,13 +1,12 @@
 # https://leetcode.com/problems/kth-smallest-element-in-a-bst
 
-from typing import List
 
 from leetcode import TreeNode
 
 
 class Solution:
     def kthSmallest(self, root: TreeNode, k: int) -> int:
-        stack: List[TreeNode] = []
+        stack: list[TreeNode] = []
         node = root
         while stack or node:
             while node:

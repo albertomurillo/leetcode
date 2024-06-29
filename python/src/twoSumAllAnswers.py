@@ -1,10 +1,9 @@
 from collections import defaultdict
 from itertools import combinations
-from typing import DefaultDict, List, Tuple
 
 
 class Solution:
-    def twoSumAlbert(self, nums: List[int], target: int) -> List[Tuple[int, int]]:
+    def twoSumAlbert(self, nums: list[int], target: int) -> list[tuple[int, int]]:
         """
         Worst: O(n!)
         Best: O(n!)
@@ -18,7 +17,7 @@ class Solution:
         Best: O(n) no solutions
         """
         answer = []
-        seen: DefaultDict[int, List[int]] = defaultdict(list)
+        seen: defaultdict[int, list[int]] = defaultdict(list)
         for i, n in enumerate(nums):
             want = target - n
             if want in seen:

@@ -1,7 +1,5 @@
 # https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string
 
-from typing import List
-
 
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
@@ -12,7 +10,7 @@ class Solution:
         return -1
 
     def strStr_boyer_moore(self, haystack: str, needle: str) -> int:  # noqa: C901
-        def build_bad_character_table(needle: str) -> List[int]:
+        def build_bad_character_table(needle: str) -> list[int]:
             m = len(needle)
             last = m - 1
             table = [m] * 256
@@ -20,7 +18,7 @@ class Solution:
                 table[ord(c)] = last - i
             return table
 
-        def build_good_suffix_table(needle: str) -> List[int]:
+        def build_good_suffix_table(needle: str) -> list[int]:
             m = len(needle)
             last = m - 1
             last_prefix = last
@@ -75,7 +73,7 @@ class Solution:
     def strStr_knuth_morris_pratt(self, haystack: str, needle: str) -> int:
         """O(n + m)"""
 
-        def build_longest_prefix_suffix_table(needle: str) -> List[int]:
+        def build_longest_prefix_suffix_table(needle: str) -> list[int]:
             table = [0] * len(needle)
             prev = 0
             curr = 1

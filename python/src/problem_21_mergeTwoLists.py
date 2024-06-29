@@ -1,6 +1,5 @@
 # https://leetcode.com/problems/merge-two-sorted-lists
 
-from typing import Optional
 
 from leetcode import ListNode
 
@@ -8,8 +7,8 @@ from leetcode import ListNode
 # pylint: disable=duplicate-code
 class Solution:
     def mergeTwoLists(
-        self, list1: Optional[ListNode], list2: Optional[ListNode]
-    ) -> Optional[ListNode]:
+        self, list1: ListNode | None, list2: ListNode | None
+    ) -> ListNode | None:
         dummy = ListNode()
         tail = dummy
 

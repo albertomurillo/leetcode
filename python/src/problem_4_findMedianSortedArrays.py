@@ -1,11 +1,11 @@
 # https://leetcode.com/problems/median-of-two-sorted-arrays
 
 import math
-from typing import Generator, List
+from collections.abc import Generator
 
 
 class Solution:
-    def findMedianSortedArrays(self, a: List[int], b: List[int]) -> float:
+    def findMedianSortedArrays(self, a: list[int], b: list[int]) -> float:
         if len(a) > len(b):
             return self.findMedianSortedArrays(a=b, b=a)
 
@@ -34,7 +34,7 @@ class Solution:
             else:
                 left = i + 1
 
-    def findMedianSortedArrays_ptrs(self, nums1: List[int], nums2: List[int]) -> float:
+    def findMedianSortedArrays_ptrs(self, nums1: list[int], nums2: list[int]) -> float:
         def merge(a, b) -> Generator[int, None, None]:
             pa, pb = 0, 0
             while pa < len(a) and pb < len(b):
@@ -65,7 +65,7 @@ class Solution:
 
         return float(next(tmp))
 
-    def findMedianSortedArrays_naive(self, nums1: List[int], nums2: List[int]) -> float:
+    def findMedianSortedArrays_naive(self, nums1: list[int], nums2: list[int]) -> float:
         tmp = sorted(nums1 + nums2)
         m = len(tmp) // 2
         if len(tmp) % 2 == 0:

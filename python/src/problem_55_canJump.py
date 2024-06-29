@@ -1,10 +1,8 @@
 # https://leetcode.com/problems/jump-game/
 
-from typing import List
-
 
 class Solution:
-    def canJump(self, nums: List[int]) -> bool:
+    def canJump(self, nums: list[int]) -> bool:
         goal = len(nums) - 1
 
         for index in reversed(range(len(nums))):

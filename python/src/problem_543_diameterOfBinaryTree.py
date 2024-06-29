@@ -1,15 +1,14 @@
 # https://leetcode.com/problems/diameter-of-binary-tree
 
-from typing import Optional
 
 from leetcode import TreeNode
 
 
 class Solution:
-    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+    def diameterOfBinaryTree(self, root: TreeNode | None) -> int:
         res = 0
 
-        def dfs(root: Optional[TreeNode]) -> int:
+        def dfs(root: TreeNode | None) -> int:
             nonlocal res
 
             if not root:

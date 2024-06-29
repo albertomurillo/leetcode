@@ -32,8 +32,4 @@ ignore = [
     "PT007",   # Wrong values type in `@pytest.mark.parametrize` expected `list` of `tuple`
     "S101",    # Use of `assert` detected
     "TCH003",  # Move standard library import `collections.abc.Iterable` into a type-checking block
-    "UP006",   # Use `list` instead of `List` for type annotation
-    "UP007",   # Use `X | Y` for type annotations
-    "UP034",   # Avoid extraneous parentheses
-    "UP035",   # `typing.List` is deprecated, use `list` instead
 ]

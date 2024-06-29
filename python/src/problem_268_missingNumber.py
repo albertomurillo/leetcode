@@ -1,10 +1,8 @@
 # https://leetcode.com/problems/missing-number
 
-from typing import List
-
 
 class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
+    def missingNumber(self, nums: list[int]) -> int:
         res = 0
         for num in nums:
             res ^= num
@@ -12,7 +10,7 @@ class Solution:
             res ^= num
         return res
 
-    def missingNumber_gauss(self, nums: List[int]) -> int:
+    def missingNumber_gauss(self, nums: list[int]) -> int:
         # res = sum(range(len(nums) + 1))         # O(n)
         res = (len(nums) * (len(nums) + 1)) // 2  # O(1)
         res -= sum(nums)

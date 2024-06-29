@@ -1,4 +1,4 @@
-from typing import Callable, List
+from collections.abc import Callable
 
 import pytest
 from problem_973_kClosest import Solution
@@ -21,6 +21,6 @@ solution = Solution()
         ([[3, 3], [5, -1], [-2, 4]], 2, [[3, 3], [-2, 4]]),
     ),
 )
-def test_kClosest(fn: Callable, points: List[List[int]], k: int, want: List[List[int]]):
+def test_kClosest(fn: Callable, points: list[list[int]], k: int, want: list[list[int]]):
     got = fn(points, k)
     assert sorted(got) == sorted(want)

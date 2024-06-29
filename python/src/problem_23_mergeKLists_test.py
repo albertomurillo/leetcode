@@ -1,4 +1,4 @@
-from typing import Callable, List
+from collections.abc import Callable
 
 import pytest
 from leetcode import build_list, iter_list
@@ -23,7 +23,7 @@ solution = Solution()
         ([[1], [0]], [0, 1]),
     ),
 )
-def test_mergeKLists(fn: Callable, lists: List[List[int]], want: List[int]):
+def test_mergeKLists(fn: Callable, lists: list[list[int]], want: list[int]):
     lls = [build_list(x) for x in lists]
     got_lls = fn(lls)
     got = list(iter_list(got_lls))

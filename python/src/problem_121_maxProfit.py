@@ -1,10 +1,8 @@
 # https://leetcode.com/problems/best-time-to-buy-and-sell-stock
 
-from typing import List
-
 
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
+    def maxProfit(self, prices: list[int]) -> int:
         cheapest = prices[0]
         profit = 0
         for price in prices:
@@ -15,7 +13,7 @@ class Solution:
 
         return profit
 
-    def maxProfit_two_ptrs(self, prices: List[int]) -> int:
+    def maxProfit_two_ptrs(self, prices: list[int]) -> int:
         left = 0
         right = 1
         profit = 0

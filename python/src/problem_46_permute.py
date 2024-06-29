@@ -1,11 +1,10 @@
 # https://leetcode.com/problems/permutations
 
 from itertools import permutations
-from typing import List
 
 
 class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
+    def permute(self, nums: list[int]) -> list[list[int]]:
         if len(nums) == 1:
             return [[nums[0]]]
 
@@ -20,5 +19,5 @@ class Solution:
 
         return result
 
-    def permute_python(self, nums: List[int]) -> List[List[int]]:
+    def permute_python(self, nums: list[int]) -> list[list[int]]:
         return [list(x) for x in permutations(nums)]

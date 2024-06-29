@@ -1,10 +1,8 @@
 # https://leetcode.com/problems/longest-common-prefix
 
-from typing import List
-
 
 class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
+    def longestCommonPrefix(self, strs: list[str]) -> str:
         res = []
         for i in range(min(len(s) for s in strs)):
             c = strs[0][i]

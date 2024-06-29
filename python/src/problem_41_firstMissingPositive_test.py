@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_41_firstMissingPositive import Solution
 
@@ -15,6 +13,6 @@ solution = Solution()
         ([1], 2),
     ),
 )
-def test_firstMissingPositive(nums: List[int], want: int):
+def test_firstMissingPositive(nums: list[int], want: int):
     got = solution.firstMissingPositive(nums)
     assert got == want

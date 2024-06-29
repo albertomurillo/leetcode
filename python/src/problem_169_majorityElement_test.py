@@ -1,4 +1,4 @@
-from typing import Callable, List
+from collections.abc import Callable
 
 import pytest
 from problem_169_majorityElement import Solution
@@ -23,7 +23,7 @@ solution = Solution()
         ([3, 3, 4], 3),
     ),
 )
-def test_majorityElement(fn: Callable, given: List[int], want: int):
+def test_majorityElement(fn: Callable, given: list[int], want: int):
     got = fn(given)
     assert got == want
 
@@ -41,5 +41,5 @@ def test_majorityElement(fn: Callable, given: List[int], want: int):
     "given",
     (([2, 2, 1, 1, 1, 2, 2]),),
 )
-def test_benchmark_majorityElement(benchmark, fn: Callable, given: List[int]):
+def test_benchmark_majorityElement(benchmark, fn: Callable, given: list[int]):
     benchmark(fn, given)

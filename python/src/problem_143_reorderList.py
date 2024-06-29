@@ -1,19 +1,18 @@
 # https://leetcode.com/problems/reorder-list
 
-from typing import Optional
 
 from leetcode import ListNode
 
 
 # pylint: disable=duplicate-code
 class Solution:
-    def reorderList(self, head: Optional[ListNode]) -> None:
+    def reorderList(self, head: ListNode | None) -> None:
         if not head:
             return
 
         # Find middle
-        slow: Optional[ListNode] = head
-        fast: Optional[ListNode] = head.next
+        slow: ListNode | None = head
+        fast: ListNode | None = head.next
         while fast and fast.next:
             assert slow
             slow = slow.next
@@ -21,8 +20,8 @@ class Solution:
 
         # Split list in two
         assert slow
-        list1: Optional[ListNode] = head
-        list2: Optional[ListNode] = slow.next
+        list1: ListNode | None = head
+        list2: ListNode | None = slow.next
         slow.next = None
 
         # Reverse second half

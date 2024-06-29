@@ -1,15 +1,14 @@
 # https://leetcode.com/problems/binary-tree-level-order-traversal
 
 from collections import deque
-from typing import Deque, List, Optional
 
 from leetcode import TreeNode
 
 
 class Solution:
-    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+    def levelOrder(self, root: TreeNode | None) -> list[list[int]]:
         res = []
-        q: Deque[TreeNode] = deque()
+        q: deque[TreeNode] = deque()
 
         if root:
             q.append(root)

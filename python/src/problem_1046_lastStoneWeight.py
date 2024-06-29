@@ -1,11 +1,10 @@
 # https://leetcode.com/problems/last-stone-weight
 
 import heapq
-from typing import List
 
 
 class Solution:
-    def lastStoneWeight(self, stones: List[int]) -> int:
+    def lastStoneWeight(self, stones: list[int]) -> int:
         q = [-x for x in stones]
         heapq.heapify(q)
 

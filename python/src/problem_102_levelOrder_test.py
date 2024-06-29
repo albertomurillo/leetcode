@@ -1,5 +1,3 @@
-from typing import List, Optional
-
 import pytest
 from leetcode import build_tree
 from problem_102_levelOrder import Solution
@@ -15,7 +13,7 @@ solution = Solution()
         ([], []),
     ),
 )
-def test_levelOrder(root: List[Optional[int]], want: List[List[int]]):
+def test_levelOrder(root: list[int | None], want: list[list[int]]):
     tree = build_tree(root)
     got = solution.levelOrder(tree)
     assert got == want

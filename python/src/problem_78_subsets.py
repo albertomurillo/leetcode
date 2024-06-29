@@ -1,12 +1,11 @@
 # https://leetcode.com/problems/subsets
 
 from itertools import combinations
-from typing import List
 
 
 class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
-        def dfs(i: int, result: List[List[int]], subset: List[int]):
+    def subsets(self, nums: list[int]) -> list[list[int]]:
+        def dfs(i: int, result: list[list[int]], subset: list[int]):
             if i >= len(nums):
                 result.append(subset.copy())
                 return
@@ -23,7 +22,7 @@ class Solution:
         dfs(0, result, [])
         return result
 
-    def subsets_python(self, nums: List[int]) -> List[List[int]]:
+    def subsets_python(self, nums: list[int]) -> list[list[int]]:
         r = [[]]
         for i in range(len(nums)):
             r.extend(list(c) for c in combinations(nums, i + 1))

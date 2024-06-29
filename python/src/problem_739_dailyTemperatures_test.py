@@ -1,5 +1,3 @@
-from typing import List
-
 import pytest
 from problem_739_dailyTemperatures import Solution
 
@@ -23,6 +21,6 @@ solution = Solution()
         ),
     ),
 )
-def test_dailyTemperatures(temperatures: List[int], want: List[int]):
+def test_dailyTemperatures(temperatures: list[int], want: list[int]):
     got = solution.dailyTemperatures(temperatures)
     assert got == want
