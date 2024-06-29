@@ -3,8 +3,8 @@ from problem_13_romanToInt import Solution
 
 
 @pytest.mark.parametrize(
-    "given, want",
-    (
+    ("given", "want"),
+    [
         ("III", 3),
         ("LVIII", 58),
         ("MCMXCIV", 1994),
@@ -12,7 +12,7 @@ from problem_13_romanToInt import Solution
         ("IX", 9),
         ("DCXXI", 621),
         ("MCMXCVI", 1996),
-    ),
+    ],
 )
 def test_romanToInt(given: str, want: int) -> None:
     solution = Solution()

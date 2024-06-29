@@ -5,8 +5,8 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "board, want",
-    (
+    ("board", "want"),
+    [
         (
             [
                 ["5", "3", ".", ".", "7", ".", ".", ".", "."],
@@ -35,7 +35,7 @@ solution = Solution()
             ],
             False,
         ),
-    ),
+    ],
 )
 def test_isValidSudoku(board: list[list[str]], want: bool) -> None:
     got = solution.isValidSudoku(board)

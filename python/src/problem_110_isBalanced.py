@@ -6,7 +6,7 @@ from leetcode import TreeNode
 
 class Solution:
     def isBalanced(self, root: TreeNode | None) -> bool:
-        def dfs(root) -> tuple[bool, int]:
+        def dfs(root: TreeNode | None) -> tuple[bool, int]:
             if not root:
                 return (True, 0)
 

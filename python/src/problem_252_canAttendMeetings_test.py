@@ -6,11 +6,11 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "intervals, want",
-    (
+    ("intervals", "want"),
+    [
         ([(0, 30), (5, 10), (15, 20)], False),
         ([(5, 8), (9, 15)], True),
-    ),
+    ],
 )
 def test_canAttendMeetings(intervals: list[tuple[int, int]], want: bool) -> None:
     _intervals = [Interval(start, end) for start, end in intervals]

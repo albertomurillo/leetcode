@@ -5,13 +5,13 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "nums, k, want",
-    (
+    ("nums", "k", "want"),
+    [
         ([1, 1, 1], 2, 2),
         ([1, 2, 3], 3, 2),
         ([-1, -1, 1], 1, 1),
-    ),
+    ],
 )
-def test_subarraySum(nums, k, want) -> None:
+def test_subarraySum(nums: list[int], k: int, want: int) -> None:
     got = solution.subarraySum(nums, k)
     assert got == want

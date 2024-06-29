@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/merge-k-sorted-lists
+from __future__ import annotations
 
 import heapq
 
@@ -42,7 +43,7 @@ class Solution:
             def __init__(self, node: ListNode) -> None:
                 self.node = node
 
-            def __lt__(self, other) -> bool:
+            def __lt__(self, other: HeapyListNode) -> bool:
                 return self.node.val < other.node.val
 
         heap = [HeapyListNode(node) for node in lists if node]

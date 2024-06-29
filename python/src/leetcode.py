@@ -9,7 +9,7 @@ if TYPE_CHECKING:
 
 # Definition of Interval:
 class Interval:
-    def __init__(self, start, end) -> None:
+    def __init__(self, start: int, end: int) -> None:
         self.start = start
         self.end = end
 
@@ -33,7 +33,9 @@ class Node:
 
 # Definition for a binary tree node.
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None) -> None:
+    def __init__(
+        self, val: int = 0, left: TreeNode | None = None, right: TreeNode | None = None
+    ) -> None:
         self.val = val
         self.left = left
         self.right = right

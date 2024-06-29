@@ -3,12 +3,12 @@ from problem_22_generateParenthesis import Solution
 
 
 @pytest.mark.parametrize(
-    "given, want",
-    (
+    ("given", "want"),
+    [
         (1, ["()"]),
         (2, ["(())", "()()"]),
         (3, ["((()))", "(()())", "(())()", "()(())", "()()()"]),
-    ),
+    ],
 )
 def test_generateParenthesis(given: int, want: list[str]) -> None:
     solution = Solution()

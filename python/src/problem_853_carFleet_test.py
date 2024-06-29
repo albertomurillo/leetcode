@@ -5,8 +5,8 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "target, position, speed, want",
-    (
+    ("target", "position", "speed", "want"),
+    [
         (
             12,
             [10, 8, 0, 5, 3],
@@ -31,8 +31,10 @@ solution = Solution()
             [7, 6, 6, 4, 3, 4, 9, 7, 6, 4],
             6,
         ),
-    ),
+    ],
 )
-def test_carFleet(target, position, speed, want) -> None:
+def test_carFleet(
+    target: int, position: list[int], speed: list[int], want: int
+) -> None:
     got = solution.carFleet(target, position, speed)
     assert got == want

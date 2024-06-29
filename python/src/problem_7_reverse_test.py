@@ -5,13 +5,13 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "n, want",
-    (
+    ("n", "want"),
+    [
         (123, 321),
         (-123, -321),
         (120, 21),
         (1534236469, 0),
-    ),
+    ],
 )
 def test_reverse(n: int, want: int) -> None:
     got = solution.reverse(n)

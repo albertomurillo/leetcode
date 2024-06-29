@@ -6,8 +6,8 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "head, k, want",
-    (
+    ("head", "k", "want"),
+    [
         (
             [1, 2, 3, 4, 5],
             2,
@@ -18,9 +18,9 @@ solution = Solution()
             3,
             [3, 2, 1, 4, 5],
         ),
-    ),
+    ],
 )
-def test_reverseKGroup(head, k, want) -> None:
+def test_reverseKGroup(head: list[int], k: int, want: list[int]) -> None:
     ll = build_list(head)
     got_ll = solution.reverseKGroup(ll, k)
     got = list(iter_list(got_ll))

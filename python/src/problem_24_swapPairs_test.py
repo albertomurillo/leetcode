@@ -22,12 +22,12 @@ def to_linked_list(items: list[int]) -> ListNode | None:
 
 
 @pytest.mark.parametrize(
-    "given, want",
-    (
+    ("given", "want"),
+    [
         ([1, 2, 3, 4], [2, 1, 4, 3]),
         ([], []),
         ([1], [1]),
-    ),
+    ],
 )
 def test_swapPairs(given: list[int], want: list[int]) -> None:
     given_ll = to_linked_list(given)

@@ -35,7 +35,7 @@ class Solution:
                 left = i + 1
 
     def findMedianSortedArrays_ptrs(self, nums1: list[int], nums2: list[int]) -> float:
-        def merge(a, b) -> Generator[int, None, None]:
+        def merge(a: list[int], b: list[int]) -> Generator[int, None, None]:
             pa, pb = 0, 0
             while pa < len(a) and pb < len(b):
                 if a[pa] <= b[pb]:

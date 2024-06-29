@@ -14,10 +14,10 @@ ignore = [
 
     "A001",    # Variable `dir` is shadowing a Python builtin
     "A002",    # Argument `open` is shadowing a Python builtin
-    "ANN001",  # Missing type annotation for function argument `benchmark`
     "E501",    # Line too long (90 > 88)
     "ERA001",  # Found commented-out code
     "FBT001",  # Boolean-typed positional argument in function definition
+    "FBT003",  # Boolean positional value in function call
     "INP001",  # File `src/twoSumAllAnswers_test.py` is part of an implicit namespace package. Add an `__init__.py`
     "N801",    # Class name `KthLargest_sorted` should use CapWords convention
     "N802",    # Function name `test_benchmark_twoSumAllAnswers` should be lowercase
@@ -25,7 +25,5 @@ ignore = [
     "N806",    # Variable `MAX` in function should be lowercase
     "PERF401", # Use a list comprehension to create a transformed list
     "PLR2004", # Magic value used in comparison, consider replacing `2` with a constant variable
-    "PT006",   # Wrong type passed to first argument of `@pytest.mark.parametrize`; expected `tuple`
-    "PT007",   # Wrong values type in `@pytest.mark.parametrize` expected `list` of `tuple`
     "S101",    # Use of `assert` detected
 ]

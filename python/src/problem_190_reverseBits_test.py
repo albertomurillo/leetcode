@@ -5,11 +5,11 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "n, want",
-    (
+    ("n", "want"),
+    [
         ("00000010100101000001111010011100", 964176192),
         ("11111111111111111111111111111101", 3221225471),
-    ),
+    ],
 )
 def test_reverseBits(n: str, want: int) -> None:
     got = solution.reverseBits(int(n, 2))

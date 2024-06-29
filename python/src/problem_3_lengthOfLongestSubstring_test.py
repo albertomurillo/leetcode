@@ -5,13 +5,13 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "s, want",
-    (
+    ("s", "want"),
+    [
         ("abcabcbb", 3),
         ("bbbbb", 1),
         ("pwwkew", 3),
         ("", 0),
-    ),
+    ],
 )
 def test_lengthOfLongestSubstring(s: str, want: int) -> None:
     got = solution.lengthOfLongestSubstring(s)

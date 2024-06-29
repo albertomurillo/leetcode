@@ -6,12 +6,12 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "root, want",
-    (
+    ("root", "want"),
+    [
         ([3, 9, 20, None, None, 15, 7], [[3], [9, 20], [15, 7]]),
         ([1], [[1]]),
         ([], []),
-    ),
+    ],
 )
 def test_levelOrder(root: list[int | None], want: list[list[int]]) -> None:
     tree = build_tree(root)

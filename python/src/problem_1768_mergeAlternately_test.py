@@ -8,18 +8,18 @@ solution = Solution()
 
 @pytest.mark.parametrize(
     "fn",
-    (
+    [
         (solution.mergeAlternately),
         (solution.mergeAlternately_python),
-    ),
+    ],
 )
 @pytest.mark.parametrize(
-    "word1, word2, want",
-    (
+    ("word1", "word2", "want"),
+    [
         ("abc", "pqr", "apbqcr"),
         ("ab", "pqrs", "apbqrs"),
         ("abcd", "pq", "apbqcd"),
-    ),
+    ],
 )
 def test_mergeAlternately(fn: Callable, word1: str, word2: str, want: int) -> None:
     got = fn(word1, word2)

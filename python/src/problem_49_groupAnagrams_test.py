@@ -14,14 +14,14 @@ class TCase(NamedTuple):
 
 @pytest.mark.parametrize(
     "fn",
-    (
+    [
         (solution.groupAnagrams),
         (solution.groupAnagrams_sort),
-    ),
+    ],
 )
 @pytest.mark.parametrize(
     "test",
-    (
+    [
         TCase(
             given=["eat", "tea", "tan", "ate", "nat", "bat"],
             want=[["bat"], ["nat", "tan"], ["ate", "eat", "tea"]],
@@ -34,7 +34,7 @@ class TCase(NamedTuple):
             given=["a"],
             want=[["a"]],
         ),
-    ),
+    ],
 )
 def test_groupAnagrams(fn: Callable, test: TCase) -> None:
     got = sorted([sorted(i) for i in fn(test.given)])

@@ -5,8 +5,8 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "matrix, want",
-    (
+    ("matrix", "want"),
+    [
         (
             [
                 [1, 2, 3],
@@ -23,8 +23,8 @@ solution = Solution()
             ],
             [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7],
         ),
-    ),
+    ],
 )
-def test_spiralOrder(matrix, want) -> None:
+def test_spiralOrder(matrix: list[list[int]], want: list[int]) -> None:
     got = solution.spiralOrder(matrix)
     assert got == want

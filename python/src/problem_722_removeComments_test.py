@@ -5,8 +5,8 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "source, want",
-    (
+    ("source", "want"),
+    [
         (
             [
                 "/*Test program */",
@@ -40,8 +40,8 @@ solution = Solution()
                 "ab",
             ],
         ),
-    ),
+    ],
 )
-def test_removeComments(source, want) -> None:
+def test_removeComments(source: list[str], want: list[str]) -> None:
     got = solution.removeComments(source)
     assert got == want

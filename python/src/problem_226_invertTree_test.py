@@ -9,18 +9,18 @@ solution = Solution()
 
 @pytest.mark.parametrize(
     "fn",
-    (
+    [
         (solution.invertTree),
         (solution.invertTree_stack),
-    ),
+    ],
 )
 @pytest.mark.parametrize(
-    "root, want",
-    (
+    ("root", "want"),
+    [
         ([4, 2, 7, 1, 3, 6, 9], [4, 7, 2, 9, 6, 3, 1]),
         ([2, 1, 3], [2, 3, 1]),
         ([], []),
-    ),
+    ],
 )
 def test_invertTree(fn: Callable, root: list[int | None], want: bool) -> None:
     tree = build_tree(root)

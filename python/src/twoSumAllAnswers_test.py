@@ -8,14 +8,14 @@ solution = Solution()
 
 @pytest.mark.parametrize(
     "fn",
-    (
+    [
         (solution.twoSumAlbert),
         (solution.twoSumDorian),
-    ),
+    ],
 )
 @pytest.mark.parametrize(
-    "nums, target, want",
-    (
+    ("nums", "target", "want"),
+    [
         (
             [1, 1, 1, 1],
             2,
@@ -33,7 +33,7 @@ solution = Solution()
             2,
             [(0, 3), (0, 5), (3, 5)],
         ),
-    ),
+    ],
 )
 def test_twoSumAllAnswers(
     fn: Callable, nums: list[int], target: int, want: list[str]
@@ -46,19 +46,19 @@ def test_twoSumAllAnswers(
 @pytest.mark.benchmark()
 @pytest.mark.parametrize(
     "fn",
-    (
+    [
         (solution.twoSumAlbert),
         (solution.twoSumDorian),
-    ),
+    ],
 )
 @pytest.mark.parametrize(
-    "nums, target",
-    (
+    ("nums", "target"),
+    [
         ([1] * 100, 2),
         ([1] * 100, 0),
-    ),
+    ],
 )
 def test_benchmark_twoSumAllAnswers(
-    benchmark, fn: Callable, nums: list[int], target: int
+    benchmark: Callable, fn: Callable, nums: list[int], target: int
 ) -> None:
     benchmark(fn, nums, target)

@@ -9,19 +9,19 @@ solution = Solution()
 
 @pytest.mark.parametrize(
     "fn",
-    (
+    [
         (solution.mergeKLists),
         (solution.mergeKLists_heap),
-    ),
+    ],
 )
 @pytest.mark.parametrize(
-    "lists, want",
-    (
+    ("lists", "want"),
+    [
         ([[1, 4, 5], [1, 3, 4], [2, 6]], [1, 1, 2, 3, 4, 4, 5, 6]),
         ([], []),
         ([[]], []),
         ([[1], [0]], [0, 1]),
-    ),
+    ],
 )
 def test_mergeKLists(fn: Callable, lists: list[list[int]], want: list[int]) -> None:
     lls = [build_list(x) for x in lists]

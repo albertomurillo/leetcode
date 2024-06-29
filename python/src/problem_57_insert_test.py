@@ -1,12 +1,14 @@
 import pytest
 from problem_57_insert import Solution
 
+type Interval = list[int]
+
 solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "intervals, newInterval, want",
-    (
+    ("intervals", "newInterval", "want"),
+    [
         (
             [[1, 3], [6, 9]],
             [2, 5],
@@ -22,8 +24,10 @@ solution = Solution()
             [5, 7],
             [[5, 7]],
         ),
-    ),
+    ],
 )
-def test_insert(intervals, newInterval, want) -> None:
+def test_insert(
+    intervals: list[Interval], newInterval: Interval, want: list[Interval]
+) -> None:
     got = solution.insert(intervals, newInterval)
     assert got == want

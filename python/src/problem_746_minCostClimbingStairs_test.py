@@ -5,11 +5,11 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "cost, want",
-    (
+    ("cost", "want"),
+    [
         ([10, 15, 20], 15),
         ([1, 100, 1, 1, 1, 100, 1, 1, 100, 1], 6),
-    ),
+    ],
 )
 def test_minCostClimbingStairs(cost: list[int], want: int) -> None:
     got = solution.minCostClimbingStairs(cost)

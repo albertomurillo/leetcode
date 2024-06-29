@@ -5,12 +5,12 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "flowerbed, n, want",
-    (
+    ("flowerbed", "n", "want"),
+    [
         ([1, 0, 0, 0, 1], 1, True),
         ([1, 0, 0, 0, 1], 2, False),
         ([0, 1, 1, 0, 0], 1, True),
-    ),
+    ],
 )
 def test_canPlaceFlowers(flowerbed: list[int], n: int, want: bool) -> None:
     got = solution.canPlaceFlowers(flowerbed, n)

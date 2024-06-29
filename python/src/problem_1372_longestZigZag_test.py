@@ -6,8 +6,8 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "root,want",
-    (
+    ("root", "want"),
+    [
         (
             [1, None, 1, 1, 1, None, None, 1, 1, None, 1, None, None, None, 1],
             3,
@@ -20,9 +20,9 @@ solution = Solution()
             [1],
             0,
         ),
-    ),
+    ],
 )
-def test_longestZigZag(root, want) -> None:
+def test_longestZigZag(root: list[int | None], want: int) -> None:
     tree = build_tree(root)
     assert tree is not None
     got = solution.longestZigZag(tree)

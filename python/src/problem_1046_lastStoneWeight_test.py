@@ -5,11 +5,11 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "stones, want",
-    (
+    ("stones", "want"),
+    [
         ([2, 7, 4, 1, 8, 1], 1),
         ([1], 1),
-    ),
+    ],
 )
 def test_lastStoneWeight(stones: list[int], want: int) -> None:
     got = solution.lastStoneWeight(stones)

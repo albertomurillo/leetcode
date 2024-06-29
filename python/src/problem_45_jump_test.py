@@ -5,11 +5,11 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "nums, want",
-    (
+    ("nums", "want"),
+    [
         ([2, 3, 1, 1, 4], 2),
         ([2, 3, 0, 1, 4], 2),
-    ),
+    ],
 )
 def test_jump(nums: list[int], want: int) -> None:
     got = solution.jump(nums)

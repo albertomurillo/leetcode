@@ -5,8 +5,8 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "intervals, queries, want",
-    (
+    ("intervals", "queries", "want"),
+    [
         (
             [[1, 4], [2, 4], [3, 6], [4, 4]],
             [2, 3, 4, 5],
@@ -17,7 +17,7 @@ solution = Solution()
             [2, 19, 5, 22],
             [2, -1, 4, 6],
         ),
-    ),
+    ],
 )
 def test_minInterval(
     intervals: list[list[int]], queries: list[int], want: list[int]

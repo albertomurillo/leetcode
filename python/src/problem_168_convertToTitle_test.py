@@ -5,13 +5,13 @@ solution = Solution()
 
 
 @pytest.mark.parametrize(
-    "columnNumber, want",
-    (
+    ("columnNumber", "want"),
+    [
         (1, "A"),
         (28, "AB"),
         (701, "ZY"),
-    ),
+    ],
 )
-def test_convertToTitle(columnNumber, want) -> None:
+def test_convertToTitle(columnNumber: int, want: str) -> None:
     got = solution.convertToTitle(columnNumber)
     assert got == want
