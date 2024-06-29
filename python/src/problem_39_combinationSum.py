@@ -46,11 +46,11 @@ class Solution:
 
             n = candidates[idx]
             if s + n <= target:
-                states.append((subset + (n,), s + n, idx))
+                states.append(((*subset, n), s + n, idx))
 
             for i, n in enumerate(candidates[idx + 1 :], start=idx + 1):
                 if s + n > target:
                     break
-                states.append((subset + (n,), s + n, i))
+                states.append(((*subset, n), s + n, i))
 
         return res
