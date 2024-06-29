@@ -38,17 +38,17 @@ class Solution:
 
         states: Deque[State] = deque([((), 0, 0)])
         while states:
-            subset, s, i = states.popleft()
+            subset, s, idx = states.popleft()
 
             if s == target:
                 res.append(subset)
                 continue
 
-            n = candidates[i]
+            n = candidates[idx]
             if s + n <= target:
-                states.append((subset + (n,), s + n, i))
+                states.append((subset + (n,), s + n, idx))
 
-            for i, n in enumerate(candidates[i + 1 :], start=i + 1):
+            for i, n in enumerate(candidates[idx + 1 :], start=idx + 1):
                 if s + n > target:
                     break
                 states.append((subset + (n,), s + n, i))
