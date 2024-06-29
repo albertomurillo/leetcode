@@ -1,12 +1,14 @@
-from collections import namedtuple
-from typing import Callable
+from typing import Callable, NamedTuple
 
 import pytest
 from problem_49_groupAnagrams import Solution
 
 solution = Solution()
 
-TCase = namedtuple("TCase", "given want")
+
+class TCase(NamedTuple):
+    given: list[str]
+    want: list[list[str]]
 
 
 @pytest.mark.parametrize(
