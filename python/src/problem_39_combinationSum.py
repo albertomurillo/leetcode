@@ -18,16 +18,14 @@ class Solution:
                 r.append(subset.copy())
                 return
 
-            if i < len(candidates):
-                if s + candidates[i] <= target:
-                    subset.append(candidates[i])
-                    dfs(i, s + candidates[i])
-                    subset.pop()
+            if i < len(candidates) and s + candidates[i] <= target:
+                subset.append(candidates[i])
+                dfs(i, s + candidates[i])
+                subset.pop()
 
             i += 1
-            if i < len(candidates):
-                if s + candidates[i] <= target:
-                    dfs(i, s)
+            if i < len(candidates) and s + candidates[i] <= target:
+                dfs(i, s)
 
         dfs(i=0, s=0)
         return r

@@ -31,7 +31,6 @@ ignore = [
     "PT006",   # Wrong type passed to first argument of `@pytest.mark.parametrize`; expected `tuple`
     "PT007",   # Wrong values type in `@pytest.mark.parametrize` expected `list` of `tuple`
     "S101",    # Use of `assert` detected
-    "SIM102",  # Use a single `if` statement instead of nested `if` statements
     "SIM103",  # Return the condition `not str2 != str1[:divisor] * factor2` directly
     "SIM110",  # Use `return all(self.board[row][col] != num for row in range(9))` instead of `for` loop
     "TCH003",  # Move standard library import `collections.abc.Iterable` into a type-checking block
