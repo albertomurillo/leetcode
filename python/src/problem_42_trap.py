@@ -41,7 +41,7 @@ class Solution:
             max_right.appendleft(tmp)
             tmp = max(tmp, height[i])
 
-        mins = [min(a, b) for a, b in zip(max_left, max_right)]
+        mins = [min(a, b) for a, b in zip(max_left, max_right, strict=True)]
 
         for i, h in enumerate(height):
             water = mins[i] - h

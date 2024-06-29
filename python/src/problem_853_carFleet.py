@@ -6,7 +6,7 @@ from typing import List
 class Solution:
     def carFleet(self, target: int, positions: List[int], speeds: List[int]) -> int:
         fleets = []
-        for position, speed in reversed(sorted(zip(positions, speeds))):
+        for position, speed in reversed(sorted(zip(positions, speeds, strict=True))):
             time_to_destination = (target - position) / speed
             if not fleets or time_to_destination > fleets[-1]:
                 fleets.append(time_to_destination)
