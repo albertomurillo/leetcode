@@ -1,7 +1,6 @@
 from typing import Callable, List
 
 import pytest
-
 from problem_973_kClosest import Solution
 
 solution = Solution()

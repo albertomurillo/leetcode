@@ -1,7 +1,6 @@
 from typing import List, Tuple
 
 import pytest
-
 from leetcode import Interval
 from problem_252_canAttendMeetings import Solution
 

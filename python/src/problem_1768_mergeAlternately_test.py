@@ -1,7 +1,6 @@
 from typing import Callable
 
 import pytest
-
 from problem_1768_mergeAlternately import Solution
 
 solution = Solution()

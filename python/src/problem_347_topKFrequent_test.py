@@ -1,7 +1,6 @@
 from typing import Callable, List
 
 import pytest
-
 from problem_347_topKFrequent import Solution
 
 solution = Solution()

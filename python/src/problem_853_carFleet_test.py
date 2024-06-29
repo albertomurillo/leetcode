@@ -1,5 +1,4 @@
 import pytest
-
 from problem_853_carFleet import Solution
 
 solution = Solution()

@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from problem_45_jump import Solution
 
 solution = Solution()

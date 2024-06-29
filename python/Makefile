@@ -1,14 +1,13 @@
-all: format test lint
+all: format lint test
 
 format: deps
-	poetry run isort .
-	poetry run black .
+	poetry run ruff check --select I --fix
+	poetry run ruff format
 
 test: deps
-	poetry run pytest --cov --benchmark-skip
+	poetry run pytest -n auto --cov --cov-report html --cov-report term:skip-covered --benchmark-skip
 
 coverage: test
-	poetry run coverage html
 	open htmlcov/index.html
 
 benchmark: deps
@@ -21,6 +20,15 @@ update:
 	scripts/poetry_update_deps.sh
 
 lint: deps
-	poetry run flake8 src
+	poetry run ruff check src
 	poetry run pylint src
 	poetry run pyright src
+
+clean:
+	rm -rf **/__pycache__
+	rm -rf .benchmarks
+	rm -rf .coverage
+	rm -rf .mypy_cache
+	rm -rf .pytest_cache
+	rm -rf .ruff_cache
+	rm -rf htmlcov

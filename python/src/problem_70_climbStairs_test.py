@@ -1,7 +1,6 @@
 from typing import Callable
 
 import pytest
-
 from problem_70_climbStairs import Solution
 
 solution = Solution()

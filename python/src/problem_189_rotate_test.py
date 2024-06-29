@@ -2,7 +2,6 @@ import copy
 from typing import Callable, List
 
 import pytest
-
 from problem_189_rotate import Solution
 
 solution = Solution()

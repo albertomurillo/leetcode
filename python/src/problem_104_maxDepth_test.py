@@ -1,7 +1,6 @@
 from typing import Callable, List, Optional
 
 import pytest
-
 from leetcode import build_tree
 from problem_104_maxDepth import Solution
 

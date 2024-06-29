@@ -1,7 +1,6 @@
 from typing import Callable, List
 
 import pytest
-
 from twoSumAllAnswers import Solution
 
 solution = Solution()

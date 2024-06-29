@@ -1,5 +1,4 @@
 import pytest
-
 from problem_78_subsets import Solution
 
 solution = Solution()

@@ -1,7 +1,6 @@
 from typing import List, Optional
 
 import pytest
-
 from leetcode import build_tree
 from problem_100_isSameTree import Solution
 

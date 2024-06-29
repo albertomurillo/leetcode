@@ -2,7 +2,6 @@ from collections import namedtuple
 from typing import Callable
 
 import pytest
-
 from problem_49_groupAnagrams import Solution
 
 solution = Solution()

@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from problem_153_findMin import Solution
 
 solution = Solution()

@@ -1,5 +1,4 @@
 import pytest
-
 from problem_1160_countCharacters import Solution
 
 solution = Solution()

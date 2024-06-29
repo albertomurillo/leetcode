@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from problem_128_longestConsecutive import Solution
 
 solution = Solution()

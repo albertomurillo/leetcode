@@ -1,5 +1,4 @@
 import pytest
-
 from problem_567_checkInclusion import Solution
 
 solution = Solution()

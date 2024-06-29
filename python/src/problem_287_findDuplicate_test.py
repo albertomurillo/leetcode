@@ -1,7 +1,6 @@
 from typing import Callable, List
 
 import pytest
-
 from problem_287_findDuplicate import Solution
 
 solution = Solution()

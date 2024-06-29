@@ -1,5 +1,4 @@
 import pytest
-
 from leetcode import build_list, iter_list
 from problem_25_reverseKGroup import Solution
 

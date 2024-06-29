@@ -1,5 +1,4 @@
 import pytest
-
 from problem_125_isPalindrome import Solution
 
 

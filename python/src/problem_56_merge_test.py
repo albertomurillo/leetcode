@@ -1,5 +1,4 @@
 import pytest
-
 from problem_56_merge import Solution
 
 solution = Solution()

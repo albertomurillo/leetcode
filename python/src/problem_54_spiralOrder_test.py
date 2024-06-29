@@ -1,5 +1,4 @@
 import pytest
-
 from problem_54_spiralOrder import Solution
 
 solution = Solution()

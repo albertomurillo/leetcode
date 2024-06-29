@@ -1,7 +1,6 @@
 from typing import Callable
 
 import pytest
-
 from problem_28_strStr import Solution
 
 solution = Solution()

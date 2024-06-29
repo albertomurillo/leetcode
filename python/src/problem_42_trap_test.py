@@ -1,7 +1,6 @@
 from typing import Callable, List
 
 import pytest
-
 from problem_42_trap import Solution
 
 solution = Solution()

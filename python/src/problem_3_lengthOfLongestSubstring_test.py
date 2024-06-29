@@ -1,5 +1,4 @@
 import pytest
-
 from problem_3_lengthOfLongestSubstring import Solution
 
 solution = Solution()

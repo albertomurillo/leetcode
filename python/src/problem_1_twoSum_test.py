@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from problem_1_twoSum import Solution
 
 

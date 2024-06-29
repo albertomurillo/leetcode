@@ -1,5 +1,4 @@
 import pytest
-
 from problem_168_convertToTitle import Solution
 
 solution = Solution()

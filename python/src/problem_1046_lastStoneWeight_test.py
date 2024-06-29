@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from problem_1046_lastStoneWeight import Solution
 
 solution = Solution()

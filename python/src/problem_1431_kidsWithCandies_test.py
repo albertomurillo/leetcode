@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from problem_1431_kidswithCandies import Solution
 
 solution = Solution()

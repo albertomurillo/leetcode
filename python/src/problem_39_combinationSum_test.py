@@ -1,5 +1,4 @@
 import pytest
-
 from problem_39_combinationSum import Solution
 
 solution = Solution()

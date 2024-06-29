@@ -1,7 +1,6 @@
 from typing import Callable, List
 
 import pytest
-
 from problem_121_maxProfit import Solution
 
 solution = Solution()

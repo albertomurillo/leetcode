@@ -1,7 +1,6 @@
 from typing import List, Tuple
 
 import pytest
-
 from problem_253_minMeetingRooms import Solution
 
 solution = Solution()

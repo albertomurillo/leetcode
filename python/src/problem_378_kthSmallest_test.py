@@ -1,5 +1,4 @@
 import pytest
-
 from problem_378_kthSmallest import Solution
 
 solution = Solution()

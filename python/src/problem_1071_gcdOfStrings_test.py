@@ -1,7 +1,6 @@
 from typing import Callable
 
 import pytest
-
 from problem_1071_gcdOfStrings import Solution
 
 solution = Solution()

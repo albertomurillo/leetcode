@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from problem_1851_minInterval import Solution
 
 solution = Solution()

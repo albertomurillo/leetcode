@@ -1,7 +1,6 @@
 from typing import Callable, List
 
 import pytest
-
 from problem_215_findKthLargest import Solution
 
 solution = Solution()

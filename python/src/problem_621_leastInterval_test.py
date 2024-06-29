@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from problem_621_leastInterval import Solution
 
 solution = Solution()

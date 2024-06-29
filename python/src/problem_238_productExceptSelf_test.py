@@ -1,7 +1,6 @@
 from typing import Callable, List
 
 import pytest
-
 from problem_238_productExceptSelf import Solution
 
 solution = Solution()

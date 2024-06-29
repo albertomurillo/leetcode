@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from problem_36_isValidSudoku import Solution
 
 solution = Solution()

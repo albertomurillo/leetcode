@@ -1,5 +1,4 @@
 import pytest
-
 from problem_14_longestCommonPrefix import Solution
 
 solution = Solution()

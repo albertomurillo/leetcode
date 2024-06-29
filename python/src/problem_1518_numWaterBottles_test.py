@@ -1,5 +1,4 @@
 import pytest
-
 from problem_1518_numWaterBottles import Solution
 
 

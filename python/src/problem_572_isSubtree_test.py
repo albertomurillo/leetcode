@@ -1,5 +1,4 @@
 import pytest
-
 from leetcode import build_tree
 from problem_572_isSubtree import Solution
 

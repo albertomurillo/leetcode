@@ -1,5 +1,4 @@
 import pytest
-
 from problem_1155_numRollsToTarget import Solution
 
 solution = Solution()

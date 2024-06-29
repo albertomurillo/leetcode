@@ -1,7 +1,6 @@
 from typing import Callable, List
 
 import pytest
-
 from problem_169_majorityElement import Solution
 
 solution = Solution()

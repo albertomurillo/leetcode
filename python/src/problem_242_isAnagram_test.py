@@ -1,5 +1,4 @@
 import pytest
-
 from problem_242_isAnagram import Solution
 
 

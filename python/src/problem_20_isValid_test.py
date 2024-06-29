@@ -1,5 +1,4 @@
 import pytest
-
 from problem_20_isValid import Solution
 
 
