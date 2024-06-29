@@ -31,5 +31,4 @@ ignore = [
     "PT006",   # Wrong type passed to first argument of `@pytest.mark.parametrize`; expected `tuple`
     "PT007",   # Wrong values type in `@pytest.mark.parametrize` expected `list` of `tuple`
     "S101",    # Use of `assert` detected
-    "TCH003",  # Move standard library import `collections.abc.Iterable` into a type-checking block
 ]
