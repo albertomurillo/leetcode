@@ -2,6 +2,7 @@ import copy
 from collections.abc import Callable
 
 import pytest
+
 from problem_189_rotate import Solution
 
 solution = Solution()

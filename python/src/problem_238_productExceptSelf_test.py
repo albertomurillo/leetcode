@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_238_productExceptSelf import Solution
 
 solution = Solution()

@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_4_findMedianSortedArrays import Solution
 
 solution = Solution()

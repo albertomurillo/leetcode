@@ -1,4 +1,5 @@
 import pytest
+
 from problem_1207_uniqueOccurrences import Solution
 
 solution = Solution()

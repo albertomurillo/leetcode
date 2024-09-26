@@ -1,4 +1,5 @@
 import pytest
+
 from leetcode import build_tree
 from problem_543_diameterOfBinaryTree import Solution
 

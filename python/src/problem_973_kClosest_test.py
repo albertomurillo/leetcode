@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_973_kClosest import Solution
 
 solution = Solution()

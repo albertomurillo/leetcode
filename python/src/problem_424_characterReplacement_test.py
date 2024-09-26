@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_424_characterReplacement import Solution
 
 solution = Solution()

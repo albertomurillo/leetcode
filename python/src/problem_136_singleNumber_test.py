@@ -2,6 +2,7 @@
 
 
 import pytest
+
 from problem_136_singleNumber import Solution
 
 solution = Solution()

@@ -1,4 +1,5 @@
 import pytest
+
 from problem_24_swapPairs import ListNode, Solution
 
 solution = Solution()

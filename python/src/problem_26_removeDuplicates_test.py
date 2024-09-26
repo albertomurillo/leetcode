@@ -1,4 +1,5 @@
 import pytest
+
 from problem_26_removeDuplicates import Solution
 
 solution = Solution()

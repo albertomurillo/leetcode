@@ -1,4 +1,5 @@
 import pytest
+
 from problem_55_canJump import Solution
 
 solution = Solution()

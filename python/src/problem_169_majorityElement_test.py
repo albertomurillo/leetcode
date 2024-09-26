@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_169_majorityElement import Solution
 
 solution = Solution()
@@ -28,7 +29,7 @@ def test_majorityElement(fn: Callable, given: list[int], want: int) -> None:
     assert got == want
 
 
-@pytest.mark.benchmark()
+@pytest.mark.benchmark
 @pytest.mark.parametrize(
     "fn",
     [

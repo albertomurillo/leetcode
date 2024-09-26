@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_191_hammingWeight import Solution
 
 solution = Solution()

@@ -1,4 +1,5 @@
 import pytest
+
 from problem_605_canPlaceFlowers import Solution
 
 solution = Solution()

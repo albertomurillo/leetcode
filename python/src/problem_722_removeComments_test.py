@@ -1,4 +1,5 @@
 import pytest
+
 from problem_722_removeComments import Solution
 
 solution = Solution()

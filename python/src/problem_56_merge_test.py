@@ -1,4 +1,5 @@
 import pytest
+
 from problem_56_merge import Solution
 
 type Interval = list[int]

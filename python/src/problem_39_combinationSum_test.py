@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_39_combinationSum import Solution
 
 solution = Solution()

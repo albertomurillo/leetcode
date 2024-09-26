@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_70_climbStairs import Solution
 
 solution = Solution()

@@ -1,4 +1,5 @@
 import pytest
+
 from problem_704_search import Solution
 
 solution = Solution()

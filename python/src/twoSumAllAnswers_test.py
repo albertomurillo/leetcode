@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from twoSumAllAnswers import Solution
 
 solution = Solution()
@@ -43,7 +44,7 @@ def test_twoSumAllAnswers(
     assert got == want
 
 
-@pytest.mark.benchmark()
+@pytest.mark.benchmark
 @pytest.mark.parametrize(
     "fn",
     [

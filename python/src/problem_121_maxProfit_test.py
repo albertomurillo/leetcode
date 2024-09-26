@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_121_maxProfit import Solution
 
 solution = Solution()

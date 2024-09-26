@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_287_findDuplicate import Solution
 
 solution = Solution()

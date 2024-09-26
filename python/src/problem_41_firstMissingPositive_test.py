@@ -1,4 +1,5 @@
 import pytest
+
 from problem_41_firstMissingPositive import Solution
 
 solution = Solution()

@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_46_permute import Solution
 
 solution = Solution()

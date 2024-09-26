@@ -1,4 +1,5 @@
 import pytest
+
 from problem_746_minCostClimbingStairs import Solution
 
 solution = Solution()

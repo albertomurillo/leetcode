@@ -1,4 +1,5 @@
 import pytest
+
 from problem_57_insert import Solution
 
 type Interval = list[int]

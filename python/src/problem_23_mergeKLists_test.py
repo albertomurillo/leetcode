@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from leetcode import build_list, iter_list
 from problem_23_mergeKLists import Solution
 

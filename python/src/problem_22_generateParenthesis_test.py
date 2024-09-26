@@ -1,4 +1,5 @@
 import pytest
+
 from problem_22_generateParenthesis import Solution
 
 

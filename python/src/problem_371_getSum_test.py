@@ -1,4 +1,5 @@
 import pytest
+
 from problem_371_getSum import Solution
 
 solution = Solution()

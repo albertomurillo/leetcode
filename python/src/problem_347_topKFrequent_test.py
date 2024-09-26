@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_347_topKFrequent import Solution
 
 solution = Solution()

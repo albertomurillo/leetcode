@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from leetcode import build_tree
 from problem_104_maxDepth import Solution
 

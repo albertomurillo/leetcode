@@ -1,4 +1,5 @@
 import pytest
+
 from problem_739_dailyTemperatures import Solution
 
 solution = Solution()

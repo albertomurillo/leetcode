@@ -1,4 +1,5 @@
 import pytest
+
 from problem_875_minEatingSpeed import Solution
 
 solution = Solution()

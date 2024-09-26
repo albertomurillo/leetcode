@@ -1,4 +1,5 @@
 import pytest
+
 from leetcode import Interval
 from problem_252_canAttendMeetings import Solution
 

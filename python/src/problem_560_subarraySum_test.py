@@ -1,4 +1,5 @@
 import pytest
+
 from problem_560_subarraySum import Solution
 
 solution = Solution()

@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_42_trap import Solution
 
 solution = Solution()

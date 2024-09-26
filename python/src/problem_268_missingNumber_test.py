@@ -1,6 +1,7 @@
 from collections.abc import Callable
 
 import pytest
+
 from problem_268_missingNumber import Solution
 
 solution = Solution()
