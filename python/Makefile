@@ -1,28 +1,28 @@
 all: format lint test
 
 format: deps
-	poetry run ruff check --select I --fix
-	poetry run ruff format
+	uv run ruff check --select I --fix
+	uv run ruff format
 
 test: deps
-	poetry run pytest -n auto --cov --cov-report html --cov-report term:skip-covered --benchmark-skip
+	uv run pytest -n auto --cov --cov-report html --cov-report term:skip-covered --benchmark-skip
 
 coverage: test
 	open htmlcov/index.html
 
 benchmark: deps
-	poetry run pytest --benchmark-only
+	uv run pytest --benchmark-only
 
 deps:
-	poetry install --sync
+	uv sync
 
 update:
-	scripts/poetry_update_deps.sh
+	scripts/uv_update_deps.py
 
 lint: deps
-	poetry run ruff check src
-	poetry run pylint src
-	poetry run pyright src
+	uv run ruff check src
+	uv run pylint src
+	uv run pyright src
 
 clean:
 	rm -rf **/__pycache__
